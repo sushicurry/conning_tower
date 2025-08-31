@@ -4,7 +4,7 @@ part 'slotitem.freezed.dart';
 part 'slotitem.g.dart';
 
 @freezed
-class SlotItem with _$SlotItem {
+sealed class SlotItem with _$SlotItem {
   factory SlotItem({
     required int id,
     required int sortNo,
@@ -26,7 +26,7 @@ class SlotItem with _$SlotItem {
 }
 
 @freezed
-class Improvement with _$Improvement {
+sealed class Improvement with _$Improvement {
   factory Improvement({
     required dynamic consume,
     required Upgrade upgrade,
@@ -38,7 +38,7 @@ class Improvement with _$Improvement {
 }
 
 @freezed
-class SlotItemAmount with _$SlotItemAmount {
+sealed class SlotItemAmount with _$SlotItemAmount {
   factory SlotItemAmount({
     required int id,
     required int amount,
@@ -49,7 +49,7 @@ class SlotItemAmount with _$SlotItemAmount {
 }
 
 @freezed
-class Upgrade with _$Upgrade {
+sealed class Upgrade with _$Upgrade {
   factory Upgrade({
     required int id,
     required int level,
@@ -62,7 +62,7 @@ class Upgrade with _$Upgrade {
 }
 
 @freezed
-class ShipId with _$ShipId {
+sealed class ShipId with _$ShipId {
   factory ShipId({
     required int shipId,
   }) = _ShipId;

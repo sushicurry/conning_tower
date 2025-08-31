@@ -6,7 +6,7 @@ part 'get_member_deck_entity.freezed.dart';
 part 'get_member_deck_entity.g.dart';
 
 @unfreezed
-class GetMemberDeckEntity with _$GetMemberDeckEntity {
+sealed class GetMemberDeckEntity with _$GetMemberDeckEntity {
   static const source = '/api_get_member/deck';
 
   factory GetMemberDeckEntity({
@@ -21,7 +21,7 @@ class GetMemberDeckEntity with _$GetMemberDeckEntity {
 }
 
 @unfreezed
-class GetMemberDeckApiDataEntity
+sealed class GetMemberDeckApiDataEntity
     with _$GetMemberDeckApiDataEntity
     implements DeckData {
   factory GetMemberDeckApiDataEntity({

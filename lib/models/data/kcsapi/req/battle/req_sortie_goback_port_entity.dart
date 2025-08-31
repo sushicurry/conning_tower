@@ -5,7 +5,7 @@ part 'req_sortie_goback_port_entity.freezed.dart';
 part 'req_sortie_goback_port_entity.g.dart';
 
 @freezed
-class ReqSortieGobackPortEntity with _$ReqSortieGobackPortEntity {
+sealed class ReqSortieGobackPortEntity with _$ReqSortieGobackPortEntity {
   static const source = "/api_req_sortie/goback_port";
 
   const factory ReqSortieGobackPortEntity({

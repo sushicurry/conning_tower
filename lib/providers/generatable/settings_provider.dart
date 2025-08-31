@@ -8,7 +8,7 @@ part 'settings_provider.freezed.dart';
 part 'settings_provider.g.dart';
 
 @freezed
-class SettingsState with _$SettingsState {
+sealed class SettingsState with _$SettingsState {
   const factory SettingsState({
     required int dashboardIndex,
     required bool kcSparkEmoji,
@@ -23,6 +23,11 @@ class SettingsState with _$SettingsState {
     required AppLayout appLayout,
     required bool showDashboardInHome,
     required bool useKancolleListener,
+    required bool desktopStyleUI,
+    required bool classicStyleUI,
+    required bool shouldAskKcBeta,
+    required bool loadedKancolle,
+    required bool hideBottomBar,
     required bool useDMMCookieModify,
     required int kancolleListenerType,
     required bool kancolleAutoScrollDownOnLoad,
@@ -40,20 +45,30 @@ class Settings extends _$Settings {
   SettingsState build() {
     int dashboardIndex = localStorage.getInt("dashboardIndex") ?? 0;
     bool kcSparkEmoji = localStorage.getBool("kcSparkEmoji") ?? false;
-    bool kcBattleReportEnable = localStorage.getBool("kcBattleReportEnable") ?? true;
+    bool kcBattleReportEnable =
+        localStorage.getBool("kcBattleReportEnable") ?? true;
     bool enableAutoProcess = localStorage.getBool('enableAutoProcess') ?? true;
     bool bottomPadding = localStorage.getBool('bottomPadding') ?? false;
-    bool enableAutoLoadHomeUrl = localStorage.getBool('enableAutoLoadHomeUrl') ?? true;
-    String customHomeUrl = localStorage.getString('customHomeUrl') ?? kGameUrl;
+    bool enableAutoLoadHomeUrl =
+        localStorage.getBool('enableAutoLoadHomeUrl') ?? false;
+    String customHomeUrl = localStorage.getString('customHomeUrl') ?? '';
     bool loadedDMM = localStorage.getBool('loadedDMM') ?? false;
     bool enableHideFAB = localStorage.getBool('enableHideFAB') ?? false;
     String customUA = localStorage.getString('customUA') ?? '';
     AppLayout appLayout = AppLayout.values[localStorage.getInt('appLayout') ??
-        AppLayout.values.indexOf(AppLayout.onlyFAB)];
+        AppLayout.values.indexOf(AppLayout.pure)];
     bool showDashboardInHome =
-        localStorage.getBool('showDashboardInHome') ?? true;
+        localStorage.getBool('showDashboardInHome') ?? false;
     bool useKancolleListener =
-        localStorage.getBool("useKancolleListener") ?? true;
+        localStorage.getBool("useKancolleListener") ?? false;
+    bool desktopStyleUI =
+        localStorage.getBool("desktopStyleUI") ?? deviceType == DeviceType.iPad
+            ? true
+            : false;
+    bool classicStyleUI = localStorage.getBool("classicStyleUI") ?? false;
+    bool shouldAskKcBeta = localStorage.getBool("shouldAskKcBeta") ?? true;
+    bool loadedKancolle = localStorage.getBool("loadedKancolle") ?? false;
+    bool hideBottomBar = localStorage.getBool("hideBottomBar") ?? false;
     bool useDMMCookieModify = localStorage.getBool("useDMMCookieModify") ?? false;
     int kancolleListenerType = localStorage.getInt("kancolleListenerType") ?? 0;
     bool kancolleAutoScrollDownOnLoad =
@@ -75,6 +90,11 @@ class Settings extends _$Settings {
       appLayout: appLayout,
       showDashboardInHome: showDashboardInHome,
       useKancolleListener: useKancolleListener,
+      desktopStyleUI: desktopStyleUI,
+      classicStyleUI: classicStyleUI,
+      shouldAskKcBeta: shouldAskKcBeta,
+      loadedKancolle: loadedKancolle,
+      hideBottomBar: hideBottomBar,
       useDMMCookieModify: useDMMCookieModify,
       kancolleListenerType: kancolleListenerType,
       kancolleAutoScrollDownOnLoad: kancolleAutoScrollDownOnLoad,

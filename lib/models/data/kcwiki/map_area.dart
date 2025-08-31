@@ -4,7 +4,7 @@ part 'map_area.freezed.dart';
 part 'map_area.g.dart';
 
 @freezed
-class KcwikiMapArea with _$KcwikiMapArea {
+sealed class KcwikiMapArea with _$KcwikiMapArea {
   factory KcwikiMapArea({
     required int id,
     required String name,

@@ -13,7 +13,7 @@ part 'ship.freezed.dart';
 part 'ship.g.dart';
 
 @unfreezed
-class Ship with _$Ship {
+sealed class Ship with _$Ship {
   const Ship._();
 
   factory Ship({

@@ -6,7 +6,7 @@ part 'get_member_slot_item_entity.freezed.dart';
 part 'get_member_slot_item_entity.g.dart';
 
 @unfreezed
-class GetMemberSlotItemEntity with _$GetMemberSlotItemEntity {
+sealed class GetMemberSlotItemEntity with _$GetMemberSlotItemEntity {
   static const source = '/api_get_member/slot_item';
 
   factory GetMemberSlotItemEntity({
@@ -21,7 +21,7 @@ class GetMemberSlotItemEntity with _$GetMemberSlotItemEntity {
 }
 
 @unfreezed
-class GetMemberSlotItemApiDataEntity
+sealed class GetMemberSlotItemApiDataEntity
     with _$GetMemberSlotItemApiDataEntity
     implements SlotItem {
   factory GetMemberSlotItemApiDataEntity({

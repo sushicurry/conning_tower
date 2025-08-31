@@ -6,7 +6,7 @@ part 'quest_data.freezed.dart';
 part 'quest_data.g.dart';
 
 @freezed
-class QuestData with _$QuestData {
+sealed class QuestData with _$QuestData {
   const factory QuestData({
     required int id,
     required String code,

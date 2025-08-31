@@ -7,7 +7,7 @@ part 'raw_data.freezed.dart';
 part 'raw_data.g.dart';
 
 @freezed
-class RawData with _$RawData {
+sealed class RawData with _$RawData {
   const RawData._();
 
   const factory RawData({
@@ -45,7 +45,7 @@ class RawData with _$RawData {
 }
 
 @freezed
-class DataLogEntity with _$DataLogEntity {
+sealed class DataLogEntity with _$DataLogEntity {
   const factory DataLogEntity({
     required int timestamp,
     required String source,

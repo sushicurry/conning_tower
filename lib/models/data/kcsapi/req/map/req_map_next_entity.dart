@@ -7,7 +7,7 @@ part 'req_map_next_entity.freezed.dart';
 part 'req_map_next_entity.g.dart';
 
 @unfreezed
-class ReqMapNextEntity with _$ReqMapNextEntity {
+sealed class ReqMapNextEntity with _$ReqMapNextEntity {
   static const source = "/api_req_map/next";
 
   factory ReqMapNextEntity({
@@ -21,7 +21,7 @@ class ReqMapNextEntity with _$ReqMapNextEntity {
 }
 
 @unfreezed
-class ReqMapNextApiDataEntity with _$ReqMapNextApiDataEntity {
+sealed class ReqMapNextApiDataEntity with _$ReqMapNextApiDataEntity {
   factory ReqMapNextApiDataEntity({
     @JsonKey(name: 'api_rashin_flg') int? apiRashinFlg,
     @JsonKey(name: 'api_rashin_id') int? apiRashinId,
@@ -51,7 +51,7 @@ class ReqMapNextApiDataEntity with _$ReqMapNextApiDataEntity {
 }
 
 @unfreezed
-class ReqMapNextApiDataApiAirsearchEntity
+sealed class ReqMapNextApiDataApiAirsearchEntity
     with _$ReqMapNextApiDataApiAirsearchEntity {
   factory ReqMapNextApiDataApiAirsearchEntity({
     @JsonKey(name: 'api_plane_type') int? apiPlaneType,
@@ -64,7 +64,7 @@ class ReqMapNextApiDataApiAirsearchEntity
 }
 
 @unfreezed
-class ReqMapNextApiDataApiEDeckInfoEntity
+sealed class ReqMapNextApiDataApiEDeckInfoEntity
     with _$ReqMapNextApiDataApiEDeckInfoEntity {
   factory ReqMapNextApiDataApiEDeckInfoEntity({
     @JsonKey(name: 'api_kind') int? apiKind,

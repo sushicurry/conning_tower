@@ -109,7 +109,7 @@ class AkashiScheduleData extends _$AkashiScheduleData {
 }
 
 @freezed
-class AkashiScheduleDataState with _$AkashiScheduleDataState {
+sealed class AkashiScheduleDataState with _$AkashiScheduleDataState {
   const factory AkashiScheduleDataState({
     required List<ImproveItem> improveItems,
     required String dataVersion,

@@ -5,7 +5,7 @@ part 'req_hensei_change_body_entity.freezed.dart';
 part 'req_hensei_change_body_entity.g.dart';
 
 @unfreezed
-class ReqHenseiChangeBodyEntity with _$ReqHenseiChangeBodyEntity {
+sealed class ReqHenseiChangeBodyEntity with _$ReqHenseiChangeBodyEntity {
   static const source = '/api_req_hensei/change';
   factory ReqHenseiChangeBodyEntity({
     @JsonKey(name: 'api_id', fromJson: int.tryParse) int? apiId,

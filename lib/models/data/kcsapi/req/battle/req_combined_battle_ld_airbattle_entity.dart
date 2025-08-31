@@ -7,7 +7,7 @@ part 'req_combined_battle_ld_airbattle_entity.freezed.dart';
 part 'req_combined_battle_ld_airbattle_entity.g.dart';
 
 @unfreezed
-class ReqCombinedBattleLdAirbattleEntity
+sealed class ReqCombinedBattleLdAirbattleEntity
     with _$ReqCombinedBattleLdAirbattleEntity {
   static const source = "/api_req_combined_battle/ld_airbattle";
 
@@ -24,7 +24,7 @@ class ReqCombinedBattleLdAirbattleEntity
 }
 
 @unfreezed
-class ReqCombinedBattleLdAirbattleApiDataEntity
+sealed class ReqCombinedBattleLdAirbattleApiDataEntity
     with _$ReqCombinedBattleLdAirbattleApiDataEntity
     implements DoubleVsSingleBattleData {
   factory ReqCombinedBattleLdAirbattleApiDataEntity({

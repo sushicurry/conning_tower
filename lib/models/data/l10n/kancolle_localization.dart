@@ -6,7 +6,7 @@ part 'kancolle_localization.freezed.dart';
 part 'kancolle_localization.g.dart';
 
 @freezed
-class KancolleLocalizationData with _$KancolleLocalizationData {
+sealed class KancolleLocalizationData with _$KancolleLocalizationData {
   const KancolleLocalizationData._();
   const factory KancolleLocalizationData({
     required String version,

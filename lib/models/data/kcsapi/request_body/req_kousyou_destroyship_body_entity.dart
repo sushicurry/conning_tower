@@ -5,7 +5,7 @@ part 'req_kousyou_destroyship_body_entity.freezed.dart';
 part 'req_kousyou_destroyship_body_entity.g.dart';
 
 @unfreezed
-class ReqKousyouDestroyshipBodyEntity with _$ReqKousyouDestroyshipBodyEntity {
+sealed class ReqKousyouDestroyshipBodyEntity with _$ReqKousyouDestroyshipBodyEntity {
   static const source = "/api_req_kousyou/destroyship";
   factory ReqKousyouDestroyshipBodyEntity({
     @JsonKey(name: 'api_ship_id') String? apiShipId,

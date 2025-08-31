@@ -9,7 +9,7 @@ part 'kancolle_quest_log.freezed.dart';
 part 'kancolle_quest_log.g.dart';
 
 @unfreezed
-class KancolleQuestLog with _$KancolleQuestLog {
+sealed class KancolleQuestLog with _$KancolleQuestLog {
   factory KancolleQuestLog({
     required int id, // quest id
     String? admiral,

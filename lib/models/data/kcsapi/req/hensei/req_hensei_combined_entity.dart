@@ -5,7 +5,7 @@ part 'req_hensei_combined_entity.freezed.dart';
 part 'req_hensei_combined_entity.g.dart';
 
 @unfreezed
-class ReqHenseiCombinedEntity with _$ReqHenseiCombinedEntity {
+sealed class ReqHenseiCombinedEntity with _$ReqHenseiCombinedEntity {
   static const source = "/api_req_hensei/combined";
   factory ReqHenseiCombinedEntity({
     @JsonKey(name: 'api_result') int? apiResult,
@@ -18,7 +18,7 @@ class ReqHenseiCombinedEntity with _$ReqHenseiCombinedEntity {
 }
 
 @unfreezed
-class ReqHenseiCombinedApiDataEntity with _$ReqHenseiCombinedApiDataEntity {
+sealed class ReqHenseiCombinedApiDataEntity with _$ReqHenseiCombinedApiDataEntity {
   factory ReqHenseiCombinedApiDataEntity({
     @JsonKey(name: 'api_combined') int? apiCombined,
   }) = _ReqHenseiCombinedApiDataEntity;

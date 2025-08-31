@@ -5,7 +5,7 @@ part 'req_kousyou_destroyship_entity.freezed.dart';
 part 'req_kousyou_destroyship_entity.g.dart';
 
 @unfreezed
-class ReqKousyouDestroyshipEntity with _$ReqKousyouDestroyshipEntity {
+sealed class ReqKousyouDestroyshipEntity with _$ReqKousyouDestroyshipEntity {
   static const source = "/api_req_kousyou/destroyship";
 
   factory ReqKousyouDestroyshipEntity({
@@ -19,7 +19,7 @@ class ReqKousyouDestroyshipEntity with _$ReqKousyouDestroyshipEntity {
 }
 
 @unfreezed
-class ReqKousyouDestroyshipApiDataEntity
+sealed class ReqKousyouDestroyshipApiDataEntity
     with _$ReqKousyouDestroyshipApiDataEntity {
   factory ReqKousyouDestroyshipApiDataEntity({
     @JsonKey(name: 'api_material') List<int?>? apiMaterial,

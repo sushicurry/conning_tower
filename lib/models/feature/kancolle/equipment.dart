@@ -11,7 +11,7 @@ part 'equipment.freezed.dart';
 part 'equipment.g.dart';
 
 @unfreezed
-class Equipment with _$Equipment {
+sealed class Equipment with _$Equipment {
   const Equipment._();
 
   factory Equipment({
@@ -143,7 +143,7 @@ class Equipment with _$Equipment {
 }
 
 @freezed
-class EquipmentImprove with _$EquipmentImprove {
+sealed class EquipmentImprove with _$EquipmentImprove {
   const factory EquipmentImprove({
     required String name,
     required List<EquipmentImproveData> data,
@@ -190,7 +190,7 @@ class EquipmentImprove with _$EquipmentImprove {
 }
 
 @freezed
-class EquipmentImproveData with _$EquipmentImproveData {
+sealed class EquipmentImproveData with _$EquipmentImproveData {
   const factory EquipmentImproveData({
     required String upgradeName,
     required ImproveResourceEntity resource,
@@ -222,7 +222,7 @@ class EquipmentImproveData with _$EquipmentImproveData {
 }
 
 @freezed
-class ImproveResourceEntity with _$ImproveResourceEntity {
+sealed class ImproveResourceEntity with _$ImproveResourceEntity {
   const factory ImproveResourceEntity({
     required int oil,
     required int ammo,
@@ -248,7 +248,7 @@ class ImproveResourceEntity with _$ImproveResourceEntity {
 }
 
 @freezed
-class EquipmentCollection with _$EquipmentCollection {
+sealed class EquipmentCollection with _$EquipmentCollection {
   factory EquipmentCollection({
     required int id,
     required String name,

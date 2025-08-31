@@ -7,7 +7,7 @@ part 'req_sortie_battle_entity.freezed.dart';
 part 'req_sortie_battle_entity.g.dart';
 
 @unfreezed
-class ReqSortieBattleEntity with _$ReqSortieBattleEntity {
+sealed class ReqSortieBattleEntity with _$ReqSortieBattleEntity {
   static const source = "/api_req_sortie/battle";
 
   factory ReqSortieBattleEntity({
@@ -21,7 +21,7 @@ class ReqSortieBattleEntity with _$ReqSortieBattleEntity {
 }
 
 @unfreezed
-class ReqSortieBattleApiDataEntity
+sealed class ReqSortieBattleApiDataEntity
     with _$ReqSortieBattleApiDataEntity
     implements FullGunFireRoundBattle, NormalBattleData {
   factory ReqSortieBattleApiDataEntity({

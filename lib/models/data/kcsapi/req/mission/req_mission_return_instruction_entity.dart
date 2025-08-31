@@ -5,7 +5,7 @@ part 'req_mission_return_instruction_entity.freezed.dart';
 part 'req_mission_return_instruction_entity.g.dart';
 
 @unfreezed
-class ReqMissionReturnInstructionEntity
+sealed class ReqMissionReturnInstructionEntity
     with _$ReqMissionReturnInstructionEntity {
   static const source = "/api_req_mission/return_instruction";
 
@@ -22,7 +22,7 @@ class ReqMissionReturnInstructionEntity
 }
 
 @unfreezed
-class ReqMissionReturnInstructionApiDataEntity
+sealed class ReqMissionReturnInstructionApiDataEntity
     with _$ReqMissionReturnInstructionApiDataEntity {
   factory ReqMissionReturnInstructionApiDataEntity({
     @JsonKey(name: 'api_mission') required List<int> apiMission,

@@ -9,7 +9,7 @@ part 'kcwiki_data.freezed.dart';
 part 'kcwiki_data.g.dart';
 
 @freezed
-class KcWikiData with _$KcWikiData {
+sealed class KcWikiData with _$KcWikiData {
   const factory KcWikiData({
     required List<Ship> ships,
     required List<MapData> maps,

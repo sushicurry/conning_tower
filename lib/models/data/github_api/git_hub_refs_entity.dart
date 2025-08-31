@@ -5,7 +5,7 @@ part 'git_hub_refs_entity.freezed.dart';
 part 'git_hub_refs_entity.g.dart';
 
 @unfreezed
-class GitHubRefsEntity with _$GitHubRefsEntity {
+sealed class GitHubRefsEntity with _$GitHubRefsEntity {
   factory GitHubRefsEntity({
     String? ref,
     @JsonKey(name: 'node_id') String? nodeId,
@@ -18,7 +18,7 @@ class GitHubRefsEntity with _$GitHubRefsEntity {
 }
 
 @unfreezed
-class GitHubRefsObjectEntity with _$GitHubRefsObjectEntity {
+sealed class GitHubRefsObjectEntity with _$GitHubRefsObjectEntity {
   factory GitHubRefsObjectEntity({
     String? sha,
     String? type,

@@ -16,7 +16,7 @@ part 'kancolle_event_ship_tags_provider.g.dart';
 const kEventShipTagsUrl = "https://conntower.github.io/ooyodo/data/event_ship_tags.json";
 
 @freezed
-class EventShipTag with _$EventShipTag {
+sealed class EventShipTag with _$EventShipTag {
   const EventShipTag._();
   const factory EventShipTag({
     @JsonKey(name: 'color') required String colorValue,
@@ -42,7 +42,7 @@ class EventShipTag with _$EventShipTag {
 }
 
 @freezed
-class EventShipTagsState with _$EventShipTagsState {
+sealed class EventShipTagsState with _$EventShipTagsState {
   const factory EventShipTagsState({
     required String dataVersion,
     required Map<String, EventShipTag> data,

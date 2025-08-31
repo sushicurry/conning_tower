@@ -5,7 +5,7 @@ part 'web_message_data.freezed.dart';
 part 'web_message_data.g.dart';
 
 @freezed
-class WebMessageData with _$WebMessageData {
+sealed class WebMessageData with _$WebMessageData {
   const factory WebMessageData({
     required String type,
     required String responseUrl,

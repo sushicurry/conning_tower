@@ -7,7 +7,7 @@ part 'req_hensei_preset_select_entity.freezed.dart';
 part 'req_hensei_preset_select_entity.g.dart';
 
 @unfreezed
-class ReqHenseiPresetSelectEntity with _$ReqHenseiPresetSelectEntity {
+sealed class ReqHenseiPresetSelectEntity with _$ReqHenseiPresetSelectEntity {
   static const source = "/api_req_hensei/preset_select";
 
   factory ReqHenseiPresetSelectEntity({
@@ -21,7 +21,7 @@ class ReqHenseiPresetSelectEntity with _$ReqHenseiPresetSelectEntity {
 }
 
 @unfreezed
-class ReqHenseiPresetSelectApiDataEntity
+sealed class ReqHenseiPresetSelectApiDataEntity
     with _$ReqHenseiPresetSelectApiDataEntity
     implements DeckData {
   factory ReqHenseiPresetSelectApiDataEntity({

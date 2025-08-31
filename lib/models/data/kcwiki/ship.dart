@@ -4,7 +4,7 @@ part 'ship.freezed.dart';
 part 'ship.g.dart';
 
 @freezed
-class Ship with _$Ship {
+sealed class Ship with _$Ship {
   factory Ship({
     required int id,
     int? sortNo,
@@ -34,7 +34,7 @@ class Ship with _$Ship {
 }
 
 @freezed
-class ShipStats with _$ShipStats {
+sealed class ShipStats with _$ShipStats {
   factory ShipStats({
     List<int>? taik,
     List<int>? souk,
@@ -62,7 +62,7 @@ class ShipStats with _$ShipStats {
 }
 
 @freezed
-class ShipGraph with _$ShipGraph {
+sealed class ShipGraph with _$ShipGraph {
   factory ShipGraph({
     List<int>? bokoN,
     List<int>? bokoD,

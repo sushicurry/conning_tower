@@ -7,7 +7,7 @@ import 'map_info.dart';
 part 'data_info.freezed.dart';
 
 @unfreezed
-class DataInfo with _$DataInfo {
+sealed class DataInfo with _$DataInfo {
   const DataInfo._();
 
   factory DataInfo({

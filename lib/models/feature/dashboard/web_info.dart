@@ -5,7 +5,7 @@ part 'web_info.freezed.dart';
 
 
 @freezed
-class WebInfo with _$WebInfo {
+sealed class WebInfo with _$WebInfo {
   const factory WebInfo({
     required String url,
     required List<Cookie> cookies,

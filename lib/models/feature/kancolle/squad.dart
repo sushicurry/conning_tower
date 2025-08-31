@@ -9,7 +9,7 @@ part 'squad.freezed.dart';
 part 'squad.g.dart';
 
 @unfreezed
-class Squad with _$Squad {
+sealed class Squad with _$Squad {
   const Squad._();
 
   factory Squad({

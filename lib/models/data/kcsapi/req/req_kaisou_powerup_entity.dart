@@ -5,7 +5,7 @@ part 'req_kaisou_powerup_entity.freezed.dart';
 part 'req_kaisou_powerup_entity.g.dart';
 
 @unfreezed
-class ReqKaisouPowerupEntity with _$ReqKaisouPowerupEntity {
+sealed class ReqKaisouPowerupEntity with _$ReqKaisouPowerupEntity {
   static const source = '/api_req_kaisou/powerup';
 
   factory ReqKaisouPowerupEntity(
@@ -18,7 +18,7 @@ class ReqKaisouPowerupEntity with _$ReqKaisouPowerupEntity {
 }
 
 @unfreezed
-class ReqKaisouPowerupApiDataEntity with _$ReqKaisouPowerupApiDataEntity {
+sealed class ReqKaisouPowerupApiDataEntity with _$ReqKaisouPowerupApiDataEntity {
 
   factory ReqKaisouPowerupApiDataEntity(
       {@JsonKey(name: 'api_powerup_flag') int? apiPowerupFlag, @JsonKey(
@@ -31,7 +31,7 @@ class ReqKaisouPowerupApiDataEntity with _$ReqKaisouPowerupApiDataEntity {
 }
 
 @unfreezed
-class ReqKaisouPowerupApiDataApiShipEntity
+sealed class ReqKaisouPowerupApiDataApiShipEntity
     with _$ReqKaisouPowerupApiDataApiShipEntity {
 
   factory ReqKaisouPowerupApiDataApiShipEntity(
@@ -73,7 +73,7 @@ class ReqKaisouPowerupApiDataApiShipEntity
 }
 
 @unfreezed
-class ReqKaisouPowerupApiDataApiDeckEntity
+sealed class ReqKaisouPowerupApiDataApiDeckEntity
     with _$ReqKaisouPowerupApiDataApiDeckEntity {
 
   factory ReqKaisouPowerupApiDataApiDeckEntity(

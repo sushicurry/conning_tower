@@ -21,7 +21,7 @@ enum CustomDeviceOrientation {
 }
 
 @freezed
-class DeviceManagerState with _$DeviceManagerState {
+sealed class DeviceManagerState with _$DeviceManagerState {
   factory DeviceManagerState(
       {required List<DeviceOrientation> orientations,
       required int orientationIndex,

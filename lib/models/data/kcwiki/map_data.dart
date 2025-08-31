@@ -4,7 +4,7 @@ part 'map_data.freezed.dart';
 part 'map_data.g.dart';
 
 @freezed
-class MapData with _$MapData {
+sealed class MapData with _$MapData {
   factory MapData({
     required int id,
     required String name,
@@ -18,7 +18,7 @@ class MapData with _$MapData {
 }
 
 @freezed
-class Route with _$Route {
+sealed class Route with _$Route {
   factory Route({
     dynamic from,
     dynamic to,
@@ -28,7 +28,7 @@ class Route with _$Route {
 }
 
 @freezed
-class Cell with _$Cell {
+sealed class Cell with _$Cell {
   factory Cell({
     String? name,
     dynamic type,

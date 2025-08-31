@@ -4,7 +4,7 @@ part 'useitem.freezed.dart';
 part 'useitem.g.dart';
 
 @freezed
-class UseItem with _$UseItem {
+sealed class UseItem with _$UseItem {
   factory UseItem({
     required int id,
     @JsonKey(name: 'usetype') required int useType,

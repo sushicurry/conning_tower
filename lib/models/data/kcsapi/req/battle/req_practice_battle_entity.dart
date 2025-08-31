@@ -7,7 +7,7 @@ part 'req_practice_battle_entity.freezed.dart';
 part 'req_practice_battle_entity.g.dart';
 
 @unfreezed
-class ReqPracticeBattleEntity with _$ReqPracticeBattleEntity {
+sealed class ReqPracticeBattleEntity with _$ReqPracticeBattleEntity {
   static const source = "/api_req_practice/battle";
 
   factory ReqPracticeBattleEntity({
@@ -21,7 +21,7 @@ class ReqPracticeBattleEntity with _$ReqPracticeBattleEntity {
 }
 
 @unfreezed
-class ReqPracticeBattleApiDataEntity
+sealed class ReqPracticeBattleApiDataEntity
     with _$ReqPracticeBattleApiDataEntity
     implements FullGunFireRoundBattle {
   factory ReqPracticeBattleApiDataEntity({

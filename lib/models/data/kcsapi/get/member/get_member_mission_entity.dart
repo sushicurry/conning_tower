@@ -5,7 +5,7 @@ part 'get_member_mission_entity.freezed.dart';
 part 'get_member_mission_entity.g.dart';
 
 @unfreezed
-class GetMemberMissionEntity with _$GetMemberMissionEntity {
+sealed class GetMemberMissionEntity with _$GetMemberMissionEntity {
   static const source = '/api_get_member/mission';
 
   factory GetMemberMissionEntity({
@@ -19,7 +19,7 @@ class GetMemberMissionEntity with _$GetMemberMissionEntity {
 }
 
 @unfreezed
-class GetMemberMissionApiDataEntity with _$GetMemberMissionApiDataEntity {
+sealed class GetMemberMissionApiDataEntity with _$GetMemberMissionApiDataEntity {
   factory GetMemberMissionApiDataEntity({
     @JsonKey(name: 'api_list_items')
     required List<GetMemberMissionApiDataApiListItemsEntity> apiListItems,
@@ -31,7 +31,7 @@ class GetMemberMissionApiDataEntity with _$GetMemberMissionApiDataEntity {
 }
 
 @unfreezed
-class GetMemberMissionApiDataApiListItemsEntity
+sealed class GetMemberMissionApiDataApiListItemsEntity
     with _$GetMemberMissionApiDataApiListItemsEntity {
   factory GetMemberMissionApiDataApiListItemsEntity({
     @JsonKey(name: 'api_mission_id') required int apiMissionId,

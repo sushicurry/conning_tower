@@ -6,7 +6,7 @@ part 'req_sortie_battle_result_entity.freezed.dart';
 part 'req_sortie_battle_result_entity.g.dart';
 
 @unfreezed
-class ReqSortieBattleResultEntity with _$ReqSortieBattleResultEntity {
+sealed class ReqSortieBattleResultEntity with _$ReqSortieBattleResultEntity {
   static const source = "/api_req_sortie/battleresult";
 
   factory ReqSortieBattleResultEntity({
@@ -21,7 +21,7 @@ class ReqSortieBattleResultEntity with _$ReqSortieBattleResultEntity {
 }
 
 @unfreezed
-class ReqSortieBattleResultApiDataEntity
+sealed class ReqSortieBattleResultApiDataEntity
     with _$ReqSortieBattleResultApiDataEntity {
   factory ReqSortieBattleResultApiDataEntity({
     @JsonKey(name: 'api_ship_id') required List<int> apiShipId,
@@ -58,7 +58,7 @@ class ReqSortieBattleResultApiDataEntity
 }
 
 @unfreezed
-class ReqSortieBattleResultApiDataApiGetUseitemEntity
+sealed class ReqSortieBattleResultApiDataApiGetUseitemEntity
     with _$ReqSortieBattleResultApiDataApiGetUseitemEntity {
   factory ReqSortieBattleResultApiDataApiGetUseitemEntity({
     @JsonKey(name: 'api_useitem_id') int? apiUseitemId,

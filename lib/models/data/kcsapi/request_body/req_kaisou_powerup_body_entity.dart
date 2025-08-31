@@ -5,7 +5,7 @@ part 'req_kaisou_powerup_body_entity.freezed.dart';
 part 'req_kaisou_powerup_body_entity.g.dart';
 
 @unfreezed
-class ReqKaisouPowerupBodyEntity with _$ReqKaisouPowerupBodyEntity {
+sealed class ReqKaisouPowerupBodyEntity with _$ReqKaisouPowerupBodyEntity {
   static const source = '/api_req_kaisou/powerup';
 
   factory ReqKaisouPowerupBodyEntity({

@@ -8,7 +8,7 @@ part 'map_state.freezed.dart';
 part 'map_state.g.dart';
 
 @freezed
-class MapState with _$MapState {
+sealed class MapState with _$MapState {
   const MapState._();
 
   const factory MapState({

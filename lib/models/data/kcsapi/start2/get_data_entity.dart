@@ -4,7 +4,7 @@ part 'get_data_entity.freezed.dart';
 part 'get_data_entity.g.dart';
 
 @unfreezed
-class GetDataEntity with _$GetDataEntity {
+sealed class GetDataEntity with _$GetDataEntity {
   factory GetDataEntity({
     @JsonKey(name: 'api_result') required int apiResult,
     @JsonKey(name: 'api_result_msg') required String apiResultMsg,
@@ -18,7 +18,7 @@ class GetDataEntity with _$GetDataEntity {
 }
 
 @unfreezed
-class GetDataApiDataEntity with _$GetDataApiDataEntity {
+sealed class GetDataApiDataEntity with _$GetDataApiDataEntity {
   factory GetDataApiDataEntity({
     @JsonKey(name: 'api_mst_ship')
     required List<GetDataApiDataApiMstShipEntity> apiMstShip,
@@ -55,7 +55,7 @@ class GetDataApiDataEntity with _$GetDataApiDataEntity {
 }
 
 @unfreezed
-class GetDataApiDataApiMstShipEntity with _$GetDataApiDataApiMstShipEntity {
+sealed class GetDataApiDataApiMstShipEntity with _$GetDataApiDataApiMstShipEntity {
   factory GetDataApiDataApiMstShipEntity({
     @JsonKey(name: 'api_id') required int apiId,
     @JsonKey(name: 'api_sortno') int? apiSortno,
@@ -93,7 +93,7 @@ class GetDataApiDataApiMstShipEntity with _$GetDataApiDataApiMstShipEntity {
 }
 
 @unfreezed
-class GetDataApiDataApiMstSlotitemEquiptypeEntity
+sealed class GetDataApiDataApiMstSlotitemEquiptypeEntity
     with _$GetDataApiDataApiMstSlotitemEquiptypeEntity {
   factory GetDataApiDataApiMstSlotitemEquiptypeEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -107,7 +107,7 @@ class GetDataApiDataApiMstSlotitemEquiptypeEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstStypeEntity with _$GetDataApiDataApiMstStypeEntity {
+sealed class GetDataApiDataApiMstStypeEntity with _$GetDataApiDataApiMstStypeEntity {
   factory GetDataApiDataApiMstStypeEntity({
     @JsonKey(name: 'api_id') required int apiId,
     @JsonKey(name: 'api_sortno') required int apiSortno,
@@ -122,7 +122,7 @@ class GetDataApiDataApiMstStypeEntity with _$GetDataApiDataApiMstStypeEntity {
 }
 
 @unfreezed
-class GetDataApiDataApiMstSlotitemEntity
+sealed class GetDataApiDataApiMstSlotitemEntity
     with _$GetDataApiDataApiMstSlotitemEntity {
   factory GetDataApiDataApiMstSlotitemEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -161,7 +161,7 @@ class GetDataApiDataApiMstSlotitemEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstFurnituregraphEntity
+sealed class GetDataApiDataApiMstFurnituregraphEntity
     with _$GetDataApiDataApiMstFurnituregraphEntity {
   factory GetDataApiDataApiMstFurnituregraphEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -177,7 +177,7 @@ class GetDataApiDataApiMstFurnituregraphEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstUseitemEntity
+sealed class GetDataApiDataApiMstUseitemEntity
     with _$GetDataApiDataApiMstUseitemEntity {
   factory GetDataApiDataApiMstUseitemEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -194,7 +194,7 @@ class GetDataApiDataApiMstUseitemEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstPayitemEntity
+sealed class GetDataApiDataApiMstPayitemEntity
     with _$GetDataApiDataApiMstPayitemEntity {
   factory GetDataApiDataApiMstPayitemEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -212,7 +212,7 @@ class GetDataApiDataApiMstPayitemEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstItemShopEntity
+sealed class GetDataApiDataApiMstItemShopEntity
     with _$GetDataApiDataApiMstItemShopEntity {
   factory GetDataApiDataApiMstItemShopEntity({
     @JsonKey(name: 'api_cabinet_1') required List<int> apiCabinet1,
@@ -225,7 +225,7 @@ class GetDataApiDataApiMstItemShopEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstMapareaEntity
+sealed class GetDataApiDataApiMstMapareaEntity
     with _$GetDataApiDataApiMstMapareaEntity {
   factory GetDataApiDataApiMstMapareaEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -239,7 +239,7 @@ class GetDataApiDataApiMstMapareaEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstMapinfoEntity
+sealed class GetDataApiDataApiMstMapinfoEntity
     with _$GetDataApiDataApiMstMapinfoEntity {
   factory GetDataApiDataApiMstMapinfoEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -262,7 +262,7 @@ class GetDataApiDataApiMstMapinfoEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstMapbgmEntity with _$GetDataApiDataApiMstMapbgmEntity {
+sealed class GetDataApiDataApiMstMapbgmEntity with _$GetDataApiDataApiMstMapbgmEntity {
   factory GetDataApiDataApiMstMapbgmEntity({
     @JsonKey(name: 'api_id') required int apiId,
     @JsonKey(name: 'api_maparea_id') required int apiMapareaId,
@@ -278,7 +278,7 @@ class GetDataApiDataApiMstMapbgmEntity with _$GetDataApiDataApiMstMapbgmEntity {
 }
 
 @unfreezed
-class GetDataApiDataApiMstMissionEntity
+sealed class GetDataApiDataApiMstMissionEntity
     with _$GetDataApiDataApiMstMissionEntity {
   factory GetDataApiDataApiMstMissionEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -306,7 +306,7 @@ class GetDataApiDataApiMstMissionEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstConstEntity with _$GetDataApiDataApiMstConstEntity {
+sealed class GetDataApiDataApiMstConstEntity with _$GetDataApiDataApiMstConstEntity {
   factory GetDataApiDataApiMstConstEntity({
     @JsonKey(name: 'api_dpflag_quest')
     required GetDataApiDataApiMstConstApiDpflagQuestEntity apiDpflagQuest,
@@ -322,7 +322,7 @@ class GetDataApiDataApiMstConstEntity with _$GetDataApiDataApiMstConstEntity {
 }
 
 @unfreezed
-class GetDataApiDataApiMstConstApiDpflagQuestEntity
+sealed class GetDataApiDataApiMstConstApiDpflagQuestEntity
     with _$GetDataApiDataApiMstConstApiDpflagQuestEntity {
   factory GetDataApiDataApiMstConstApiDpflagQuestEntity({
     @JsonKey(name: 'api_string_value') required String apiStringValue,
@@ -335,7 +335,7 @@ class GetDataApiDataApiMstConstApiDpflagQuestEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstConstApiBokoMaxShipsEntity
+sealed class GetDataApiDataApiMstConstApiBokoMaxShipsEntity
     with _$GetDataApiDataApiMstConstApiBokoMaxShipsEntity {
   factory GetDataApiDataApiMstConstApiBokoMaxShipsEntity({
     @JsonKey(name: 'api_string_value') required String apiStringValue,
@@ -348,7 +348,7 @@ class GetDataApiDataApiMstConstApiBokoMaxShipsEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstConstApiParallelQuestMaxEntity
+sealed class GetDataApiDataApiMstConstApiParallelQuestMaxEntity
     with _$GetDataApiDataApiMstConstApiParallelQuestMaxEntity {
   factory GetDataApiDataApiMstConstApiParallelQuestMaxEntity({
     @JsonKey(name: 'api_string_value') required String apiStringValue,
@@ -361,7 +361,7 @@ class GetDataApiDataApiMstConstApiParallelQuestMaxEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstShipupgradeEntity
+sealed class GetDataApiDataApiMstShipupgradeEntity
     with _$GetDataApiDataApiMstShipupgradeEntity {
   factory GetDataApiDataApiMstShipupgradeEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -383,7 +383,7 @@ class GetDataApiDataApiMstShipupgradeEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstBgmEntity with _$GetDataApiDataApiMstBgmEntity {
+sealed class GetDataApiDataApiMstBgmEntity with _$GetDataApiDataApiMstBgmEntity {
   factory GetDataApiDataApiMstBgmEntity({
     @JsonKey(name: 'api_id') required int apiId,
     @JsonKey(name: 'api_name') required String apiName,
@@ -394,7 +394,7 @@ class GetDataApiDataApiMstBgmEntity with _$GetDataApiDataApiMstBgmEntity {
 }
 
 @unfreezed
-class GetDataApiDataApiMstEquipShipEntity
+sealed class GetDataApiDataApiMstEquipShipEntity
     with _$GetDataApiDataApiMstEquipShipEntity {
   factory GetDataApiDataApiMstEquipShipEntity({
     @JsonKey(name: 'api_ship_id') required int apiShipId,
@@ -407,7 +407,7 @@ class GetDataApiDataApiMstEquipShipEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstFurnitureEntity
+sealed class GetDataApiDataApiMstFurnitureEntity
     with _$GetDataApiDataApiMstFurnitureEntity {
   factory GetDataApiDataApiMstFurnitureEntity({
     @JsonKey(name: 'api_id') int? apiId,
@@ -430,7 +430,7 @@ class GetDataApiDataApiMstFurnitureEntity
 }
 
 @unfreezed
-class GetDataApiDataApiMstShipgraphEntity
+sealed class GetDataApiDataApiMstShipgraphEntity
     with _$GetDataApiDataApiMstShipgraphEntity {
   factory GetDataApiDataApiMstShipgraphEntity({
     @JsonKey(name: 'api_id') required int apiId,

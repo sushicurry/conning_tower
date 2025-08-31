@@ -7,7 +7,7 @@ part 'req_map_start_entity.freezed.dart';
 part 'req_map_start_entity.g.dart';
 
 @unfreezed
-class ReqMapStartEntity with _$ReqMapStartEntity {
+sealed class ReqMapStartEntity with _$ReqMapStartEntity {
   static const source = "/api_req_map/start";
 
   factory ReqMapStartEntity({
@@ -21,7 +21,7 @@ class ReqMapStartEntity with _$ReqMapStartEntity {
 }
 
 @unfreezed
-class ReqMapStartApiDataEntity with _$ReqMapStartApiDataEntity {
+sealed class ReqMapStartApiDataEntity with _$ReqMapStartApiDataEntity {
   factory ReqMapStartApiDataEntity({
     @JsonKey(name: 'api_cell_data')
     List<ReqMapStartApiDataApiCellDataEntity?>? apiCellData,
@@ -55,7 +55,7 @@ class ReqMapStartApiDataEntity with _$ReqMapStartApiDataEntity {
 }
 
 @unfreezed
-class ReqMapStartApiDataApiCellDataEntity
+sealed class ReqMapStartApiDataApiCellDataEntity
     with _$ReqMapStartApiDataApiCellDataEntity {
   factory ReqMapStartApiDataApiCellDataEntity({
     @JsonKey(name: 'api_id') int? apiId,
@@ -70,7 +70,7 @@ class ReqMapStartApiDataApiCellDataEntity
 }
 
 @unfreezed
-class ReqMapStartApiDataApiAirsearchEntity
+sealed class ReqMapStartApiDataApiAirsearchEntity
     with _$ReqMapStartApiDataApiAirsearchEntity {
   factory ReqMapStartApiDataApiAirsearchEntity({
     @JsonKey(name: 'api_plane_type') int? apiPlaneType,
@@ -83,7 +83,7 @@ class ReqMapStartApiDataApiAirsearchEntity
 }
 
 @unfreezed
-class ReqMapStartApiDataApiEDeckInfoEntity
+sealed class ReqMapStartApiDataApiEDeckInfoEntity
     with _$ReqMapStartApiDataApiEDeckInfoEntity {
   factory ReqMapStartApiDataApiEDeckInfoEntity({
     @JsonKey(name: 'api_kind') int? apiKind,
@@ -96,7 +96,7 @@ class ReqMapStartApiDataApiEDeckInfoEntity
 }
 
 @unfreezed
-class ReqMapStartApiDataApiEventmapEntity
+sealed class ReqMapStartApiDataApiEventmapEntity
     with _$ReqMapStartApiDataApiEventmapEntity {
   factory ReqMapStartApiDataApiEventmapEntity({
     @JsonKey(name: 'api_max_maphp') int? apiMaxMaphp,
@@ -110,7 +110,7 @@ class ReqMapStartApiDataApiEventmapEntity
 }
 
 @unfreezed
-class ReqMapStartApiDataApiSelectRouteEntity
+sealed class ReqMapStartApiDataApiSelectRouteEntity
     with _$ReqMapStartApiDataApiSelectRouteEntity {
   factory ReqMapStartApiDataApiSelectRouteEntity({
     @JsonKey(name: 'api_select_cells') dynamic apiSelectCells,

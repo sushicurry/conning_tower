@@ -8,7 +8,7 @@ part 'deck_builder_entity.freezed.dart';
 part 'deck_builder_entity.g.dart';
 
 @unfreezed
-class DeckBuilderEntity with _$DeckBuilderEntity {
+sealed class DeckBuilderEntity with _$DeckBuilderEntity {
   factory DeckBuilderEntity({
     int? version,
     DeckBuilderFleetEntity? f1,
@@ -40,7 +40,7 @@ class DeckBuilderEntity with _$DeckBuilderEntity {
 }
 
 @unfreezed
-class DeckBuilderFleetEntity with _$DeckBuilderFleetEntity {
+sealed class DeckBuilderFleetEntity with _$DeckBuilderFleetEntity {
   factory DeckBuilderFleetEntity({
     DeckBuilderFleetShipEntity? s1,
     DeckBuilderFleetShipEntity? s2,
@@ -84,7 +84,7 @@ class DeckBuilderFleetEntity with _$DeckBuilderFleetEntity {
 }
 
 @unfreezed
-class DeckBuilderFleetShipEntity with _$DeckBuilderFleetShipEntity {
+sealed class DeckBuilderFleetShipEntity with _$DeckBuilderFleetShipEntity {
   factory DeckBuilderFleetShipEntity({
     int? id,
     int? lv,
@@ -106,7 +106,7 @@ class DeckBuilderFleetShipEntity with _$DeckBuilderFleetShipEntity {
 }
 
 @unfreezed
-class DeckBuilderItemsEntity with _$DeckBuilderItemsEntity {
+sealed class DeckBuilderItemsEntity with _$DeckBuilderItemsEntity {
   factory DeckBuilderItemsEntity({
     DeckBuilderItemEntity? i1,
     DeckBuilderItemEntity? i2,
@@ -139,7 +139,7 @@ class DeckBuilderItemsEntity with _$DeckBuilderItemsEntity {
 }
 
 @unfreezed
-class DeckBuilderItemEntity with _$DeckBuilderItemEntity {
+sealed class DeckBuilderItemEntity with _$DeckBuilderItemEntity {
   factory DeckBuilderItemEntity({
     int? id,
     int? rf,
