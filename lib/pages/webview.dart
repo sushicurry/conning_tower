@@ -103,6 +103,7 @@ class AppWebViewState extends ConsumerState<AppWebView> {
               // },
               onConsoleMessage: (controller, consoleMessage) {
                 log(consoleMessage.message);
+                debugPrint("---WebView JS Message --- ${consoleMessage.message}");
               },
               onNavigationResponse: (controller, response) async {
                 await webController.onNavigationResponse(response);

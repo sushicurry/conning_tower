@@ -12,6 +12,7 @@ alignCSS.innerHTML = `html {
 }
 #game_frame {
   width: 1200px !important;
+  height: 860px !important;
   position: absolute;
   top: 0px;
   left: 0;
@@ -50,14 +51,14 @@ window.unAlign = () => {
 }
 
 window.resizeOnLargeScreen = () => {
-    let windowWidth = window.innerWidth
-    let scaleRatio = windowWidth / 1200
-    console.log('width:'+windowWidth+' scale:'+scaleRatio)
+    let windowHeight = window.innerHeight
+    let scaleRatio = windowHeight / 900
+    console.log('width:'+windowHeight+' scale:'+scaleRatio)
     let flashWrap = document.getElementById('flashWrap')
     flashWrap.style.transformOrigin = 'center top'
     flashWrap.style.position = 'fixed'
     flashWrap.style.transform = 'scale('+ scaleRatio + ')'
-    flashWrap.style.left = (windowWidth - 1200) / 2 +'px'
+    flashWrap.style.top = (windowHeight - 900) / 2 +'px'
     flashWrap.style.zIndex = '100'
     document.getElementById('sectionWrap').style.display = 'none';
 }
