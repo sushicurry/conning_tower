@@ -50,15 +50,17 @@ window.unAlign = () => {
     }
 }
 
-window.resizeOnLargeScreen = () => {
+window.resizeOnLargeScreen = function() {
     let windowHeight = window.innerHeight
     let scaleRatio = windowHeight / 900
-    console.log('width:'+windowHeight+' scale:'+scaleRatio)
+    console.log('height:'+windowHeight+' scale:'+scaleRatio)
     let flashWrap = document.getElementById('flashWrap')
     flashWrap.style.transformOrigin = 'center top'
-    flashWrap.style.position = 'fixed'
+    flashWrap.style.position = 'absolute !important'
     flashWrap.style.transform = 'scale('+ scaleRatio + ')'
-    flashWrap.style.top = (windowHeight - 900) / 2 +'px'
+    flashWrap.style.top = (windowHeight - 860) / 2 +'px'
+    //flashWrap.style.left = '50% !important'
     flashWrap.style.zIndex = '100'
-    document.getElementById('sectionWrap').style.display = 'none';
+    document.head.append(flashWrap)
+    document.getElementById('sectionWrap').style.display = 'none'
 }

@@ -2,6 +2,7 @@ import 'dart:collection';
 import 'dart:developer';
 import 'dart:io';
 
+
 import 'package:conning_tower/constants.dart';
 import 'package:conning_tower/helper.dart';
 import 'package:conning_tower/main.dart';
@@ -64,7 +65,27 @@ class AppWebViewState extends ConsumerState<AppWebView> {
     return AspectRatio(
       aspectRatio: 5 / 3,
       child: LayoutBuilder(builder: (context, constraints) {
-        // debugPrint("rate: ${(constraints.maxWidth / constraints.maxHeight)/(5/3)}");
+         debugPrint("Constraint width: ${constraints.maxWidth} \n Constraint height: ${constraints.maxHeight} \nrate: ${(constraints.maxWidth / constraints.maxHeight)/(5/3)}");
+
+         /*void runResize(InAppWebViewController controller) { 
+          const double gameWidth = 1200.0; 
+          const double gameHeight = 860.0;
+
+          double heightScale = constraints.maxHeight/gameHeight;
+          double widthScale = constraints.maxWidth/gameWidth;
+          double scaleRatio; 
+
+          if(heightScale < widthScale) {
+            scaleRatio = heightScale;
+          }else {
+            scaleRatio = widthScale;
+          }
+          debugPrint("Evaluating Resize JS");
+          controller.evaluateJavascript(  
+            source:
+              "if (typeof window.resizeOnLargeScreen === function) {window.resizeOnLargeScreen($scaleRatio);}"
+          );
+         }*/
         return Stack(
           alignment: Alignment.bottomCenter,
           children: [
@@ -90,8 +111,11 @@ class AppWebViewState extends ConsumerState<AppWebView> {
                 await webController.onLoadStart(uri!, useHttpForKancolle: settings.useHttpForKancolle);
                 // var uri = Uri.parse(uri);
               },
-              onLoadStop: (controller, uri) {
+              onLoadStop: (controller, uri) async {
                 webController.onLoadStop(uri!);
+                //runResize(controller);
+                debugPrint("onContentSizeChanged after Load Stop");
+                await webController.onContentSizeChanged();
               },
               onTitleChanged: (controller, title) {
                 ref
@@ -113,6 +137,7 @@ class AppWebViewState extends ConsumerState<AppWebView> {
                   (controller, oldContentSize, newContentSize) async {
                 debugPrint(
                     "onContentSizeChanged $oldContentSize, $newContentSize");
+                //runResize(controller);
                 await webController.onContentSizeChanged();
               },
               shouldInterceptRequest: (

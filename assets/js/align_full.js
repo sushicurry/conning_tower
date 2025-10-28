@@ -55,33 +55,36 @@ window.unAlign = () => {
 }
 
 const flashWrapCSS = document.createElement('style')
-flashWrapCSS.innerHTML = `#flashWrap {
-    transform-origin: center top;
-    position: fixed;
-    z-index: 100;
-    background-color: #000;
-}
-`
+flashWrapCSS.innerHTML = '#flashWrap {' + 
+    //transform-origin: center top;
+    'position: absolute;' +
+    'z-index: 100;'+
+    'background-color: #000;' + 
+  '}'
+
 
 window.resizeOnLargeScreen = () => {
     let windowHeight = window.innerHeight
     let scaleRatio = windowHeight / 900
     flashWrapCSS.style.transform = 'scale('+ scaleRatio + ')'
-    flashWrapCSS.style.top = (windowHeight - 900) / 2 +'px'
-    document.body.appendChild(flashWrapCSS)
+    flashWrapCSS.style.top = (windowHeight - 860) / 2 +'px'
+    //flashWrapCSS.style.left = '50%'
+    document.head.appendChild(flashWrapCSS)
     window.scrollTo(0, 0)
 }
 
-window.resizeOnLargeScreen = () => {
+window.resizeOnLargeScreen = function() {
     let windowHeight = window.innerHeight
     let scaleRatio = windowHeight / 900
-    console.log('width:'+windowHeight+' scale:'+scaleRatio)
+    console.log('height:'+windowHeight+' scale:'+scaleRatio)
     let flashWrap = document.getElementById('flashWrap')
     flashWrap.style.transformOrigin = 'center top'
-    flashWrap.style.position = 'fixed'
+    flashWrap.style.position = 'absolute'
     flashWrap.style.transform = 'scale('+ scaleRatio + ')'
-    flashWrap.style.top = (windowHeight - 900) / 2 +'px'
+    flashWrap.style.top = (windowHeight - 860) / 2 +'px'
+    //flashWrap.style.left = '50% !important'   
     flashWrap.style.zIndex = '100'
     document.getElementById('sectionWrap').style.display = 'none';
-    console.log('width:'+windowHeight+' scale:'+scaleRatio)
+    console.log('height:'+windowHeight+' scale:'+scaleRatio)
+    document.head.appendChild(flashWrapCSS)
 }
