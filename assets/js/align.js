@@ -1,14 +1,15 @@
 const alignCSS = document.createElement('style')
-alignCSS.innerHTML = `html {
-  overflow: hidden;
+alignCSS.innerHTML = `html,body {
+  overflow: hidden; background-color:black;
 }
-#w, #main-ntg {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  margin-left: 0 !important;
-  margin-top: 0 !important;
+#w, #main-ntg, {
+  //position: absolute !important;
+  //top: 0;
+  //left: 0;
+  //z-index: 100;
+  //margin-left: 0 !important;
+  //margin-top: 0 !important;
+  display: none !important;
 }
 #game_frame {
   width: 1200px !important;
@@ -19,6 +20,7 @@ alignCSS.innerHTML = `html {
 }
 .naviapp {
   z-index: -1;
+  display: none !important;
 }
 #ntg-recommend {
   display: none !important;
@@ -35,10 +37,11 @@ alignCSS.innerHTML = `html {
 
 window.align = function () {
     if (
-        location.pathname.includes('854854') ||
+        location.pathname.includes('kancolle') ||
         location.hostname === 'osapi.dmm.com' ||
         location.pathname.includes('kcs')
     ) {
+        console.log("~~~~~~~~~ LOCATION: " +location)
         document.body.appendChild(alignCSS)
         window.scrollTo(0, 0)
     }
@@ -52,7 +55,7 @@ window.unAlign = () => {
 
 window.resizeOnLargeScreen = function() {
     let windowHeight = window.innerHeight
-    let scaleRatio = windowHeight / 900
+    let scaleRatio = windowHeight / 860
     console.log('height:'+windowHeight+' scale:'+scaleRatio)
     let flashWrap = document.getElementById('flashWrap')
     flashWrap.style.transformOrigin = 'center top'

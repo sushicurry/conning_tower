@@ -200,10 +200,13 @@ class WebController extends _$WebController {
     inKancolleWindow = false;
     autoAdjusted = false;
     if (uri.path.startsWith(gameUrlPath) || uri.path.startsWith(gameAppUrlPath)) {
-      log("game load start");
+      debugPrint("!!!!!!!!!!!!!!!game load start");
       ref.watch(settingsProvider.notifier).setBool('loadedKancolle', true);
+      await onScreenResize();
     } else if (uri.host == kDMMOSAPIDomain) {
       inKancolleOsapiWindow = true;
+      debugPrint("!!!!!!!!!!!!!!!!In KC OsAPI Window, calling screen resize");
+      await onScreenResize();
     }
 
     // make kancolle url always use http
@@ -251,6 +254,8 @@ class WebController extends _$WebController {
             "input.value='$customHomeUrl';input.placeholder='🔍 ${S.current.AssetsHtmlSearchBarText}';goButton.textContent='${S.current.AssetsHtmlSearchBarGo}';",
       );
     }
+
+
 
   }
 
@@ -320,6 +325,7 @@ class WebController extends _$WebController {
 
   Future<void> onScreenResize() async {
     if ((inKancolleWindow || inKancolleOsapiWindow) && needScale && autoAdjusted) {
+      debugPrint("onScreenResize called --- inKCWindow: $inKancolleWindow, inKCOsAPI: $inKancolleOsapiWindow, needScale: $needScale, autoAdjusted: $autoAdjusted");
       await controller.evaluateJavascript(source: "window.resizeOnLargeScreen()");
     }
   }

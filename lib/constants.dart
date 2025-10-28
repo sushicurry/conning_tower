@@ -8,9 +8,11 @@ const String kGitHubDocsUrl = 'https://github.com/conntower/docs';
 const String kDocsUrl = 'https://conntower.github.io/docs';
 const String kChromeUA =
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36";
-const String kGameUrl =
-    'http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854';
-const String kGameUrlApp = "http://www.dmm.com/netgame/social/application/-/detail/=/app_id=854854";
+//const String kGameUrl =
+    //'http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854';
+//const String kGameUrlApp = "http://www.dmm.com/netgame/social/application/-/detail/=/app_id=854854";
+const String kGameUrl = "https://play.games.dmm.com/game/kancolle";
+const String kGameUrlApp = "https://play.games.dmm.com/game/kancolle";
 const String kDMMOSAPIDomain = "osapi.dmm.com";
 const String kDMMDomain = "dmm.com";
 const String kGoogle = 'https://www.google.com/';
