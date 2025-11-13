@@ -1,7 +1,7 @@
 const String autoScaleAndroidJS = "assets/js/autoScaleAndroid.js";
 const String autoScaleIOSJS = "assets/js/autoScaleIOS.js";
 const String httpRedirectJS = "assets/js/httpRedirect.js";
-const String kAppStoreID = '6446080475';
+//const String kAppStoreID = '6446080475';
 const String kXUrl = 'https://twitter.com/conntower';
 const String kGitHubOpenUrl = 'https://github.com/andychucs/conning_tower';
 const String kGitHubDocsUrl = 'https://github.com/conntower/docs';

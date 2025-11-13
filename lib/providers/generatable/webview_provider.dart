@@ -36,7 +36,7 @@ final gameAppUrlPath = Uri.parse(kGameUrlApp).path;
 
 UserScript get kancolleUserScript => UserScript(
     source: AssetLoader.kcInjectJS,
-    injectionTime: UserScriptInjectionTime.AT_DOCUMENT_START,
+    injectionTime: UserScriptInjectionTime.AT_DOCUMENT_END,
     forMainFrameOnly: false,
     groupName: "KC");
 
@@ -442,7 +442,7 @@ class WebController extends _$WebController {
     // log("response: ${messageData.responseUrl}");
     // log("response_type: ${messageData.responseType}");
     // log("data: ${messageData.response}");
-
+    debugPrint("^^^^^^^^^^^^^^^^^^^ Reciving API message from KANCOLLE ~~~~~~~~~~~~~~~~~~");
     if (messageData.responseUrl.contains("/kcsapi/") && messageData.type == "load") {
       final result = messageData.response?.replaceAll('svdata=', '');
       Map<String, dynamic> params = {};
