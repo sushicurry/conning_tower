@@ -73,7 +73,7 @@ API sample:
 */
 
 @unfreezed
-class AkashiScheduleApiEntity with _$AkashiScheduleApiEntity {
+sealed class AkashiScheduleApiEntity with _$AkashiScheduleApiEntity {
   factory AkashiScheduleApiEntity({
     AkashiSchedule? data,
     MetaMsg? meta,
@@ -84,7 +84,7 @@ class AkashiScheduleApiEntity with _$AkashiScheduleApiEntity {
 }
 
 @unfreezed
-class MetaMsg with _$MetaMsg {
+sealed class MetaMsg with _$MetaMsg {
   @Assert("version == '1.0.0'", "API version is invalid, please update")
   factory MetaMsg({
     String? version,

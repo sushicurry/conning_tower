@@ -15,7 +15,7 @@ apiLostKind:
 4=「空襲による基地の損害はありません。」
  */
 @freezed
-class AirbaseDefenseInfo with _$AirbaseDefenseInfo {
+sealed class AirbaseDefenseInfo with _$AirbaseDefenseInfo {
   const factory AirbaseDefenseInfo({
     int? apiLostKind,
     @JsonKey(name: 'api_m2') int? apiM2,

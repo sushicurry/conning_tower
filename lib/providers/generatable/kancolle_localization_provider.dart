@@ -24,7 +24,7 @@ const kEquipmentTypeLocalizationUrl =
     'https://conntower.github.io/ooyodo/data/equipment_type_l10n_without_id.json';
 
 @freezed
-class KancolleLocalizationState with _$KancolleLocalizationState {
+sealed class KancolleLocalizationState with _$KancolleLocalizationState {
   const factory KancolleLocalizationState({
     required Locale locale,
     KancolleLocalizationData? data,

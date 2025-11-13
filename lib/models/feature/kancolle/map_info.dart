@@ -7,7 +7,7 @@ part 'map_info.g.dart';
 enum AreaType { normal, event }
 
 @freezed
-class MapArea with _$MapArea {
+sealed class MapArea with _$MapArea {
   const factory MapArea({
     required int id,
     required String name,
@@ -32,7 +32,7 @@ class MapArea with _$MapArea {
 }
 
 @freezed
-class MapInfo with _$MapInfo {
+sealed class MapInfo with _$MapInfo {
   const MapInfo._();
 
   const factory MapInfo({
@@ -60,7 +60,7 @@ class MapInfo with _$MapInfo {
 }
 
 @freezed
-class MapInfoLog with _$MapInfoLog {
+sealed class MapInfoLog with _$MapInfoLog {
   const factory MapInfoLog({
     required int id,
   }) = _MapInfoLog;

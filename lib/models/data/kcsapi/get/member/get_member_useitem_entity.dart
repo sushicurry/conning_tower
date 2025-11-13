@@ -4,7 +4,7 @@ part 'get_member_useitem_entity.freezed.dart';
 part 'get_member_useitem_entity.g.dart';
 
 @unfreezed
-class GetMemberUseitemEntity with _$GetMemberUseitemEntity {
+sealed class GetMemberUseitemEntity with _$GetMemberUseitemEntity {
   static const source = '/api_get_member/useitem';
 
   factory GetMemberUseitemEntity({
@@ -18,7 +18,7 @@ class GetMemberUseitemEntity with _$GetMemberUseitemEntity {
 }
 
 @unfreezed
-class GetMemberUseitemApiDataEntity with _$GetMemberUseitemApiDataEntity {
+sealed class GetMemberUseitemApiDataEntity with _$GetMemberUseitemApiDataEntity {
   factory GetMemberUseitemApiDataEntity({
     @JsonKey(name: 'api_id') int? apiId,
     @JsonKey(name: 'api_count') int? apiCount,

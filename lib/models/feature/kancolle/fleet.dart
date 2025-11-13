@@ -9,7 +9,7 @@ import 'ship.dart';
 part 'fleet.freezed.dart';
 
 @unfreezed
-class Fleet with _$Fleet {
+sealed class Fleet with _$Fleet {
   const Fleet._();
 
   factory Fleet({

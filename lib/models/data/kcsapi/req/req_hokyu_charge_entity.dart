@@ -5,7 +5,7 @@ part 'req_hokyu_charge_entity.freezed.dart';
 part 'req_hokyu_charge_entity.g.dart';
 
 @unfreezed
-class ReqHokyuChargeEntity with _$ReqHokyuChargeEntity {
+sealed class ReqHokyuChargeEntity with _$ReqHokyuChargeEntity {
   static const source = '/api_req_hokyu/charge';
 
   factory ReqHokyuChargeEntity({
@@ -19,7 +19,7 @@ class ReqHokyuChargeEntity with _$ReqHokyuChargeEntity {
 }
 
 @unfreezed
-class ReqHokyuChargeApiDataEntity with _$ReqHokyuChargeApiDataEntity {
+sealed class ReqHokyuChargeApiDataEntity with _$ReqHokyuChargeApiDataEntity {
   factory ReqHokyuChargeApiDataEntity({
     @JsonKey(name: 'api_ship')
     List<ReqHokyuChargeApiDataApiShipEntity>? apiShip,
@@ -32,7 +32,7 @@ class ReqHokyuChargeApiDataEntity with _$ReqHokyuChargeApiDataEntity {
 }
 
 @unfreezed
-class ReqHokyuChargeApiDataApiShipEntity
+sealed class ReqHokyuChargeApiDataApiShipEntity
     with _$ReqHokyuChargeApiDataApiShipEntity {
   factory ReqHokyuChargeApiDataApiShipEntity({
     @JsonKey(name: 'api_id') int? apiId,

@@ -5,7 +5,7 @@ part 'get_member_mapinfo_entity.freezed.dart';
 part 'get_member_mapinfo_entity.g.dart';
 
 @unfreezed
-class GetMemberMapinfoEntity with _$GetMemberMapinfoEntity {
+sealed class GetMemberMapinfoEntity with _$GetMemberMapinfoEntity {
   static const source = '/api_get_member/mapinfo';
 
   factory GetMemberMapinfoEntity({
@@ -19,7 +19,7 @@ class GetMemberMapinfoEntity with _$GetMemberMapinfoEntity {
 }
 
 @unfreezed
-class GetMemberMapinfoApiDataEntity with _$GetMemberMapinfoApiDataEntity {
+sealed class GetMemberMapinfoApiDataEntity with _$GetMemberMapinfoApiDataEntity {
   factory GetMemberMapinfoApiDataEntity({
     @JsonKey(name: 'api_map_info')
     List<GetMemberMapinfoApiDataApiMapInfoEntity?>? apiMapInfo,
@@ -35,7 +35,7 @@ class GetMemberMapinfoApiDataEntity with _$GetMemberMapinfoApiDataEntity {
 }
 
 @unfreezed
-class GetMemberMapinfoApiDataApiMapInfoEntity
+sealed class GetMemberMapinfoApiDataApiMapInfoEntity
     with _$GetMemberMapinfoApiDataApiMapInfoEntity {
   factory GetMemberMapinfoApiDataApiMapInfoEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -56,7 +56,7 @@ class GetMemberMapinfoApiDataApiMapInfoEntity
 }
 
 @freezed
-class ApiEventMap with _$ApiEventMap {
+sealed class ApiEventMap with _$ApiEventMap {
   const factory ApiEventMap({
     @JsonKey(name: 'api_now_maphp') int? apiNowMapHP,
     @JsonKey(name: 'api_max_maphp') int? apiMaxMapHP,
@@ -69,7 +69,7 @@ class ApiEventMap with _$ApiEventMap {
 }
 
 @unfreezed
-class GetMemberMapinfoApiDataApiAirBaseEntity
+sealed class GetMemberMapinfoApiDataApiAirBaseEntity
     with _$GetMemberMapinfoApiDataApiAirBaseEntity {
   factory GetMemberMapinfoApiDataApiAirBaseEntity({
     @JsonKey(name: 'api_area_id') int? apiAreaId,
@@ -88,7 +88,7 @@ class GetMemberMapinfoApiDataApiAirBaseEntity
 }
 
 @unfreezed
-class GetMemberMapinfoApiDataApiAirBaseApiDistanceEntity
+sealed class GetMemberMapinfoApiDataApiAirBaseApiDistanceEntity
     with _$GetMemberMapinfoApiDataApiAirBaseApiDistanceEntity {
   factory GetMemberMapinfoApiDataApiAirBaseApiDistanceEntity({
     @JsonKey(name: 'api_base') int? apiBase,
@@ -101,7 +101,7 @@ class GetMemberMapinfoApiDataApiAirBaseApiDistanceEntity
 }
 
 @unfreezed
-class GetMemberMapinfoApiDataApiAirBaseApiPlaneInfoEntity
+sealed class GetMemberMapinfoApiDataApiAirBaseApiPlaneInfoEntity
     with _$GetMemberMapinfoApiDataApiAirBaseApiPlaneInfoEntity {
   factory GetMemberMapinfoApiDataApiAirBaseApiPlaneInfoEntity({
     @JsonKey(name: 'api_squadron_id') int? apiSquadronId,
@@ -115,7 +115,7 @@ class GetMemberMapinfoApiDataApiAirBaseApiPlaneInfoEntity
 }
 
 @unfreezed
-class GetMemberMapinfoApiDataApiAirBaseExpandedInfoEntity
+sealed class GetMemberMapinfoApiDataApiAirBaseExpandedInfoEntity
     with _$GetMemberMapinfoApiDataApiAirBaseExpandedInfoEntity {
   factory GetMemberMapinfoApiDataApiAirBaseExpandedInfoEntity({
     @JsonKey(name: 'api_area_id') int? apiAreaId,

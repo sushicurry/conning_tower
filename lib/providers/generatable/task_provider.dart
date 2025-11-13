@@ -24,7 +24,7 @@ part 'task_provider.g.dart';
 bool isFirstOpen = true;
 
 @freezed
-class TaskUtilState with _$TaskUtilState {
+sealed class TaskUtilState with _$TaskUtilState {
   factory TaskUtilState({
     required String source,
     required Tasks tasks,

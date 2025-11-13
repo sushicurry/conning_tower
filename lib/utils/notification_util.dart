@@ -75,8 +75,8 @@ class NotificationUtil {
       scheduledDate,
       notificationDetails,
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
+      //uiLocalNotificationDateInterpretation:
+          //UILocalNotificationDateInterpretation.absoluteTime,
     );
   }
 

@@ -5,7 +5,7 @@ part 'req_mission_result_entity.freezed.dart';
 part 'req_mission_result_entity.g.dart';
 
 @unfreezed
-class ReqMissionResultEntity with _$ReqMissionResultEntity {
+sealed class ReqMissionResultEntity with _$ReqMissionResultEntity {
   static const source = "/api_req_mission/result";
 
   factory ReqMissionResultEntity({
@@ -19,7 +19,7 @@ class ReqMissionResultEntity with _$ReqMissionResultEntity {
 }
 
 @unfreezed
-class ReqMissionResultApiDataEntity with _$ReqMissionResultApiDataEntity {
+sealed class ReqMissionResultApiDataEntity with _$ReqMissionResultApiDataEntity {
   factory ReqMissionResultApiDataEntity({
     @JsonKey(name: 'api_ship_id') List<int>? apiShipId,
     @JsonKey(name: 'api_clear_result') int? apiClearResult,

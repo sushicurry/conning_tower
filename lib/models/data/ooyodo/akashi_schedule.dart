@@ -28,7 +28,7 @@ List<tz.TZDateTime> weekdays = [
 ];
 
 @unfreezed
-class AkashiSchedule with _$AkashiSchedule {
+sealed class AkashiSchedule with _$AkashiSchedule {
   factory AkashiSchedule({
     @JsonKey(name: 'data_version') String? dataVersion,
     List<ImproveItem>? items,
@@ -39,7 +39,7 @@ class AkashiSchedule with _$AkashiSchedule {
 }
 
 @unfreezed
-class ImproveItem with _$ImproveItem {
+sealed class ImproveItem with _$ImproveItem {
   const ImproveItem._();
 
   factory ImproveItem({
@@ -90,7 +90,7 @@ class ImproveItem with _$ImproveItem {
 }
 
 @unfreezed
-class ImproveData with _$ImproveData {
+sealed class ImproveData with _$ImproveData {
   const ImproveData._();
 
   factory ImproveData({
@@ -140,7 +140,7 @@ class ImproveData with _$ImproveData {
 }
 
 @freezed
-class ImproveReq with _$ImproveReq {
+sealed class ImproveReq with _$ImproveReq {
   const ImproveReq._();
 
   @Assert("day.length == 7")
@@ -203,7 +203,7 @@ class ImproveReq with _$ImproveReq {
 }
 
 @unfreezed
-class UpgradeItem with _$UpgradeItem {
+sealed class UpgradeItem with _$UpgradeItem {
   factory UpgradeItem({
     int? id,
     int? lv,
@@ -214,7 +214,7 @@ class UpgradeItem with _$UpgradeItem {
 }
 
 @unfreezed
-class ImproveResource with _$ImproveResource {
+sealed class ImproveResource with _$ImproveResource {
   factory ImproveResource({
     List<int?>? base,
     List<ImproveResourceExtra?>? extra,
@@ -225,7 +225,7 @@ class ImproveResource with _$ImproveResource {
 }
 
 @unfreezed
-class ImproveResourceExtra with _$ImproveResourceExtra {
+sealed class ImproveResourceExtra with _$ImproveResourceExtra {
   factory ImproveResourceExtra({
     @JsonKey(name: 'dm') List<int?>? developmentMaterial,
     @JsonKey(name: 'im') List<int?>? improvementMaterial,
@@ -266,7 +266,7 @@ class ImproveResourceExtra with _$ImproveResourceExtra {
 }
 
 @freezed
-class ImproveCost with _$ImproveCost {
+sealed class ImproveCost with _$ImproveCost {
   const ImproveCost._();
   factory ImproveCost({required int max, int? min}) = _ImproveCost;
 

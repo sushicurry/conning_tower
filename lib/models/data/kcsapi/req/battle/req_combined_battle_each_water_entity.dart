@@ -7,7 +7,7 @@ part 'req_combined_battle_each_water_entity.freezed.dart';
 part 'req_combined_battle_each_water_entity.g.dart';
 
 @unfreezed
-class ReqCombinedBattleEachWaterEntity with _$ReqCombinedBattleEachWaterEntity {
+sealed class ReqCombinedBattleEachWaterEntity with _$ReqCombinedBattleEachWaterEntity {
   static const source = "/api_req_combined_battle/each_battle_water";
 
   factory ReqCombinedBattleEachWaterEntity({
@@ -22,7 +22,7 @@ class ReqCombinedBattleEachWaterEntity with _$ReqCombinedBattleEachWaterEntity {
 }
 
 @unfreezed
-class ReqCombinedBattleEachWaterApiDataEntity
+sealed class ReqCombinedBattleEachWaterApiDataEntity
     with _$ReqCombinedBattleEachWaterApiDataEntity
     implements
         DoubleVsDoubleBattleData,

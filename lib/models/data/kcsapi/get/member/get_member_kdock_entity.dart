@@ -5,7 +5,7 @@ part 'get_member_kdock_entity.freezed.dart';
 part 'get_member_kdock_entity.g.dart';
 
 @unfreezed
-class GetMemberKdockEntity with _$GetMemberKdockEntity {
+sealed class GetMemberKdockEntity with _$GetMemberKdockEntity {
   static const source = "/api_get_member/kdock";
   factory GetMemberKdockEntity({
     @JsonKey(name: 'api_result') int? apiResult,
@@ -18,7 +18,7 @@ class GetMemberKdockEntity with _$GetMemberKdockEntity {
 }
 
 @unfreezed
-class GetMemberKdockApiDataEntity with _$GetMemberKdockApiDataEntity {
+sealed class GetMemberKdockApiDataEntity with _$GetMemberKdockApiDataEntity {
   factory GetMemberKdockApiDataEntity({
     @JsonKey(name: 'api_id') int? apiId,
     @JsonKey(name: 'api_state') int? apiState,

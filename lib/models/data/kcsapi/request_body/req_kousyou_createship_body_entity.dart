@@ -5,7 +5,7 @@ part 'req_kousyou_createship_body_entity.freezed.dart';
 part 'req_kousyou_createship_body_entity.g.dart';
 
 @unfreezed
-class ReqKousyouCreateshipBodyEntity with _$ReqKousyouCreateshipBodyEntity {
+sealed class ReqKousyouCreateshipBodyEntity with _$ReqKousyouCreateshipBodyEntity {
   static const source = "/api_req_kousyou/createship";
   factory ReqKousyouCreateshipBodyEntity({
     @JsonKey(name: 'api_kdock_id') String? apiKdockId,

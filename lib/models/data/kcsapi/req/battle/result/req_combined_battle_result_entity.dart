@@ -5,7 +5,7 @@ part 'req_combined_battle_result_entity.freezed.dart';
 part 'req_combined_battle_result_entity.g.dart';
 
 @unfreezed
-class ReqCombinedBattleResultEntity with _$ReqCombinedBattleResultEntity {
+sealed class ReqCombinedBattleResultEntity with _$ReqCombinedBattleResultEntity {
   static const source = "/api_req_combined_battle/battleresult";
 
   factory ReqCombinedBattleResultEntity({
@@ -19,7 +19,7 @@ class ReqCombinedBattleResultEntity with _$ReqCombinedBattleResultEntity {
 }
 
 @unfreezed
-class ReqCombinedBattleResultApiDataEntity
+sealed class ReqCombinedBattleResultApiDataEntity
     with _$ReqCombinedBattleResultApiDataEntity {
   factory ReqCombinedBattleResultApiDataEntity({
     @JsonKey(name: 'api_ship_id') List<int?>? apiShipId,
@@ -56,7 +56,7 @@ class ReqCombinedBattleResultApiDataEntity
 }
 
 @unfreezed
-class BattleResultEnemyInfoEntity with _$BattleResultEnemyInfoEntity {
+sealed class BattleResultEnemyInfoEntity with _$BattleResultEnemyInfoEntity {
   factory BattleResultEnemyInfoEntity({
     @JsonKey(name: 'api_level') String? apiLevel,
     @JsonKey(name: 'api_rank') String? apiRank,
@@ -68,7 +68,7 @@ class BattleResultEnemyInfoEntity with _$BattleResultEnemyInfoEntity {
 }
 
 @unfreezed
-class BattleResultGetShipEntity with _$BattleResultGetShipEntity {
+sealed class BattleResultGetShipEntity with _$BattleResultGetShipEntity {
   factory BattleResultGetShipEntity({
     @JsonKey(name: 'api_ship_id') int? apiShipId,
     @JsonKey(name: 'api_ship_type') String? apiShipType,
@@ -81,7 +81,7 @@ class BattleResultGetShipEntity with _$BattleResultGetShipEntity {
 }
 
 @freezed
-class BattleResultEscapeEntity with _$BattleResultEscapeEntity {
+sealed class BattleResultEscapeEntity with _$BattleResultEscapeEntity {
   // data structure also see: https://www.cat-ears.net/?p=38652
   const factory BattleResultEscapeEntity({
     @JsonKey(name: 'api_escape_idx') required List<int> apiEscapeIdx,

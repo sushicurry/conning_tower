@@ -5,7 +5,7 @@ part 'kcwiki_api_ship_entity.freezed.dart';
 part 'kcwiki_api_ship_entity.g.dart';
 
 @unfreezed
-class KcwikiApiShipEntity with _$KcwikiApiShipEntity {
+sealed class KcwikiApiShipEntity with _$KcwikiApiShipEntity {
   factory KcwikiApiShipEntity({
     required int id,
     required String name,

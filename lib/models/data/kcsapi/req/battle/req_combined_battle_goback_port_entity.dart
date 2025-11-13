@@ -5,7 +5,7 @@ part 'req_combined_battle_goback_port_entity.freezed.dart';
 part 'req_combined_battle_goback_port_entity.g.dart';
 
 @freezed
-class ReqCombinedBattleGobackPortEntity
+sealed class ReqCombinedBattleGobackPortEntity
     with _$ReqCombinedBattleGobackPortEntity {
   static const source = "/api_req_combined_battle/goback_port";
 

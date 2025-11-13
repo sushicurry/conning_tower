@@ -5,7 +5,7 @@ part 'expedition_entity.freezed.dart';
 part 'expedition_entity.g.dart';
 
 @unfreezed
-class ExpeditionEntity with _$ExpeditionEntity {
+sealed class ExpeditionEntity with _$ExpeditionEntity {
   factory ExpeditionEntity({
     required String no,
     required String code,
@@ -24,7 +24,7 @@ class ExpeditionEntity with _$ExpeditionEntity {
 }
 
 @unfreezed
-class ExpeditionNameEntity with _$ExpeditionNameEntity {
+sealed class ExpeditionNameEntity with _$ExpeditionNameEntity {
   factory ExpeditionNameEntity({
     required String jp,
     required String ko,

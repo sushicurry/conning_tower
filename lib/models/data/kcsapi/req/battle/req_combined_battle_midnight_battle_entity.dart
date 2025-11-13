@@ -7,7 +7,7 @@ part 'req_combined_battle_midnight_battle_entity.freezed.dart';
 part 'req_combined_battle_midnight_battle_entity.g.dart';
 
 @unfreezed
-class ReqCombinedBattleMidnightBattleEntity
+sealed class ReqCombinedBattleMidnightBattleEntity
     with _$ReqCombinedBattleMidnightBattleEntity {
   static const source = "/api_req_combined_battle/midnight_battle";
 
@@ -24,7 +24,7 @@ class ReqCombinedBattleMidnightBattleEntity
 }
 
 @unfreezed
-class ReqCombinedBattleMidnightBattleApiDataEntity
+sealed class ReqCombinedBattleMidnightBattleApiDataEntity
     with _$ReqCombinedBattleMidnightBattleApiDataEntity
     implements DoubleVsSingleBattleData, NightBattleData {
   factory ReqCombinedBattleMidnightBattleApiDataEntity({

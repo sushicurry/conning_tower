@@ -8,7 +8,7 @@ part 'get_member_require_info_entity.freezed.dart';
 part 'get_member_require_info_entity.g.dart';
 
 @unfreezed
-class GetMemberRequireInfoEntity with _$GetMemberRequireInfoEntity {
+sealed class GetMemberRequireInfoEntity with _$GetMemberRequireInfoEntity {
   static const source = '/api_get_member/require_info';
 
   factory GetMemberRequireInfoEntity({
@@ -23,7 +23,7 @@ class GetMemberRequireInfoEntity with _$GetMemberRequireInfoEntity {
 }
 
 @unfreezed
-class GetMemberRequireInfoApiDataEntity
+sealed class GetMemberRequireInfoApiDataEntity
     with _$GetMemberRequireInfoApiDataEntity {
   factory GetMemberRequireInfoApiDataEntity({
     @JsonKey(name: 'api_basic')
@@ -50,7 +50,7 @@ class GetMemberRequireInfoApiDataEntity
 }
 
 @unfreezed
-class GetMemberRequireInfoApiDataApiBasicEntity
+sealed class GetMemberRequireInfoApiDataApiBasicEntity
     with _$GetMemberRequireInfoApiDataApiBasicEntity {
   factory GetMemberRequireInfoApiDataApiBasicEntity({
     @JsonKey(name: 'api_member_id') required int apiMemberId,
@@ -63,7 +63,7 @@ class GetMemberRequireInfoApiDataApiBasicEntity
 }
 
 @unfreezed
-class GetMemberRequireInfoApiDataApiSlotItemEntity
+sealed class GetMemberRequireInfoApiDataApiSlotItemEntity
     with _$GetMemberRequireInfoApiDataApiSlotItemEntity
     implements SlotItem {
   factory GetMemberRequireInfoApiDataApiSlotItemEntity({
@@ -80,7 +80,7 @@ class GetMemberRequireInfoApiDataApiSlotItemEntity
 }
 
 @unfreezed
-class GetMemberRequireInfoApiDataApiKdockEntity
+sealed class GetMemberRequireInfoApiDataApiKdockEntity
     with _$GetMemberRequireInfoApiDataApiKdockEntity {
   factory GetMemberRequireInfoApiDataApiKdockEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -101,7 +101,7 @@ class GetMemberRequireInfoApiDataApiKdockEntity
 }
 
 @unfreezed
-class GetMemberRequireInfoApiDataApiFurnitureEntity
+sealed class GetMemberRequireInfoApiDataApiFurnitureEntity
     with _$GetMemberRequireInfoApiDataApiFurnitureEntity {
   factory GetMemberRequireInfoApiDataApiFurnitureEntity({
     @JsonKey(name: 'api_id') required int apiId,
@@ -116,7 +116,7 @@ class GetMemberRequireInfoApiDataApiFurnitureEntity
 }
 
 @unfreezed
-class GetMemberRequireInfoApiDataApiOssSettingEntity
+sealed class GetMemberRequireInfoApiDataApiOssSettingEntity
     with _$GetMemberRequireInfoApiDataApiOssSettingEntity {
   factory GetMemberRequireInfoApiDataApiOssSettingEntity({
     @JsonKey(name: 'api_language_type') required int apiLanguageType,

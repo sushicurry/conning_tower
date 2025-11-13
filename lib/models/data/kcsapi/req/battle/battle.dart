@@ -127,7 +127,7 @@ abstract class CarrierOrEscortBattleData implements BattleBasicModel {
 }
 
 @unfreezed
-class GunFireRoundEntity with _$GunFireRoundEntity implements GunFireRound {
+sealed class GunFireRoundEntity with _$GunFireRoundEntity implements GunFireRound {
   factory GunFireRoundEntity({
     @JsonKey(name: 'api_at_eflag') List<int>? apiAtEflag,
     @JsonKey(name: 'api_at_list') List<int>? apiAtList,
@@ -143,7 +143,7 @@ class GunFireRoundEntity with _$GunFireRoundEntity implements GunFireRound {
 }
 
 @unfreezed
-class OpeningTorpedoRoundEntity with _$OpeningTorpedoRoundEntity {
+sealed class OpeningTorpedoRoundEntity with _$OpeningTorpedoRoundEntity {
   factory OpeningTorpedoRoundEntity({
     @JsonKey(name: 'api_frai_list_items')
     required List<List<int>?> apiFraiListItems,
@@ -166,7 +166,7 @@ class OpeningTorpedoRoundEntity with _$OpeningTorpedoRoundEntity {
 }
 
 @unfreezed
-class TorpedoRoundEntity with _$TorpedoRoundEntity {
+sealed class TorpedoRoundEntity with _$TorpedoRoundEntity {
   factory TorpedoRoundEntity({
     @JsonKey(name: 'api_frai') required List<int> apiFrai,
     @JsonKey(name: 'api_fcl') required List<num> apiFcl,
@@ -208,7 +208,7 @@ class TorpedoRoundEntity with _$TorpedoRoundEntity {
 }
 
 @unfreezed
-class BattleDataAircraftRoundStage1 with _$BattleDataAircraftRoundStage1 {
+sealed class BattleDataAircraftRoundStage1 with _$BattleDataAircraftRoundStage1 {
   factory BattleDataAircraftRoundStage1({
     int? apiFCount,
     int? apiFLostcount,
@@ -223,7 +223,7 @@ class BattleDataAircraftRoundStage1 with _$BattleDataAircraftRoundStage1 {
 }
 
 @unfreezed
-class BattleDataAircraftRoundStage2 with _$BattleDataAircraftRoundStage2 {
+sealed class BattleDataAircraftRoundStage2 with _$BattleDataAircraftRoundStage2 {
   factory BattleDataAircraftRoundStage2({
     int? apiFCount,
     int? apiFLostcount,
@@ -236,7 +236,7 @@ class BattleDataAircraftRoundStage2 with _$BattleDataAircraftRoundStage2 {
 }
 
 @unfreezed
-class BattleDataAircraftRoundStage3 with _$BattleDataAircraftRoundStage3 {
+sealed class BattleDataAircraftRoundStage3 with _$BattleDataAircraftRoundStage3 {
   factory BattleDataAircraftRoundStage3({
     List<int?>? apiFraiFlag,
     List<int?>? apiEraiFlag,
@@ -255,7 +255,7 @@ class BattleDataAircraftRoundStage3 with _$BattleDataAircraftRoundStage3 {
 }
 
 @unfreezed
-class AirBaseAttackRound with _$AirBaseAttackRound {
+sealed class AirBaseAttackRound with _$AirBaseAttackRound {
   factory AirBaseAttackRound({
     @JsonKey(name: 'api_base_id') int? apiBaseId,
     @JsonKey(name: 'api_stage_flag') List<int>? apiStageFlag,
@@ -273,7 +273,7 @@ class AirBaseAttackRound with _$AirBaseAttackRound {
 }
 
 @unfreezed
-class AirBasePlane with _$AirBasePlane {
+sealed class AirBasePlane with _$AirBasePlane {
   factory AirBasePlane({
     @JsonKey(name: 'api_mst_id') int? apiMstId,
     @JsonKey(name: 'api_count') int? apiCount,
@@ -284,7 +284,7 @@ class AirBasePlane with _$AirBasePlane {
 }
 
 @unfreezed
-class NightBattleGunFireRoundEntity
+sealed class NightBattleGunFireRoundEntity
     with _$NightBattleGunFireRoundEntity
     implements GunFireRound {
   factory NightBattleGunFireRoundEntity({
@@ -303,7 +303,7 @@ class NightBattleGunFireRoundEntity
 }
 
 @unfreezed
-class AirBaseJetAircraftRound with _$AirBaseJetAircraftRound {
+sealed class AirBaseJetAircraftRound with _$AirBaseJetAircraftRound {
   factory AirBaseJetAircraftRound({
     dynamic apiPlaneFrom,
     List<AirBasePlane?>? apiAirBaseData,
@@ -318,7 +318,7 @@ class AirBaseJetAircraftRound with _$AirBaseJetAircraftRound {
 }
 
 @unfreezed
-class AircraftRoundData with _$AircraftRoundData implements AircraftRound {
+sealed class AircraftRoundData with _$AircraftRoundData implements AircraftRound {
   factory AircraftRoundData({
     @JsonKey(name: 'api_plane_from') dynamic apiPlaneFrom,
     @JsonKey(name: 'api_stage1') BattleDataAircraftRoundStage1? apiStage1,
@@ -333,7 +333,7 @@ class AircraftRoundData with _$AircraftRoundData implements AircraftRound {
 }
 
 @freezed
-class BattleSupportInfo with _$BattleSupportInfo {
+sealed class BattleSupportInfo with _$BattleSupportInfo {
   const factory BattleSupportInfo({
     AircraftRoundData? apiSupportAiratack,
     BattleGunfireSupport? apiSupportHourai,
@@ -344,7 +344,7 @@ class BattleSupportInfo with _$BattleSupportInfo {
 }
 
 @freezed
-class BattleGunfireSupport with _$BattleGunfireSupport {
+sealed class BattleGunfireSupport with _$BattleGunfireSupport {
   const factory BattleGunfireSupport({
     int? apiDeckId,
     List<int>? apiShipId,
@@ -358,7 +358,7 @@ class BattleGunfireSupport with _$BattleGunfireSupport {
 }
 
 @freezed
-class FriendlyFleetBattle with _$FriendlyFleetBattle {
+sealed class FriendlyFleetBattle with _$FriendlyFleetBattle {
   const factory FriendlyFleetBattle({
     dynamic apiFlarePos,
     GunFireRoundEntity? apiHougeki,
@@ -369,7 +369,7 @@ class FriendlyFleetBattle with _$FriendlyFleetBattle {
 }
 
 @freezed
-class BattleFriendlyInfo with _$BattleFriendlyInfo {
+sealed class BattleFriendlyInfo with _$BattleFriendlyInfo {
   const factory BattleFriendlyInfo({
     int? apiProductionType,
     required List<int> apiShipId,

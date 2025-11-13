@@ -7,7 +7,7 @@ part 'req_sortie_airbattle_entity.freezed.dart';
 part 'req_sortie_airbattle_entity.g.dart';
 
 @unfreezed
-class ReqSortieAirbattleEntity with _$ReqSortieAirbattleEntity {
+sealed class ReqSortieAirbattleEntity with _$ReqSortieAirbattleEntity {
   static const source = "/api_req_sortie/airbattle";
 
   factory ReqSortieAirbattleEntity({
@@ -21,7 +21,7 @@ class ReqSortieAirbattleEntity with _$ReqSortieAirbattleEntity {
 }
 
 @unfreezed
-class ReqSortieAirbattleApiDataEntity
+sealed class ReqSortieAirbattleApiDataEntity
     with _$ReqSortieAirbattleApiDataEntity
     implements BattleBasicModel {
   factory ReqSortieAirbattleApiDataEntity({

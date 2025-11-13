@@ -9,7 +9,7 @@ import '../../data/kcsapi/kcsapi.dart';
 part 'sea_force_base.freezed.dart';part 'sea_force_base.g.dart';
 
 @unfreezed
-class SeaForceBase with _$SeaForceBase {
+sealed class SeaForceBase with _$SeaForceBase {
   const SeaForceBase._();
 
   factory SeaForceBase({
@@ -92,7 +92,7 @@ class SeaForceBase with _$SeaForceBase {
 }
 
 @freezed
-class SeaForceBaseResource with _$SeaForceBaseResource {
+sealed class SeaForceBaseResource with _$SeaForceBaseResource {
   const factory SeaForceBaseResource({
     required int fuel,
     required int ammo,
@@ -109,7 +109,7 @@ class SeaForceBaseResource with _$SeaForceBaseResource {
 }
 
 @freezed
-class Admiral with _$Admiral {
+sealed class Admiral with _$Admiral {
   const Admiral._();
 
   const factory Admiral({

@@ -7,7 +7,7 @@ part 'port_entity.freezed.dart';
 part 'port_entity.g.dart';
 
 @unfreezed
-class PortEntity with _$PortEntity {
+sealed class PortEntity with _$PortEntity {
   factory PortEntity({
     @JsonKey(name: 'api_result') required int apiResult,
     @JsonKey(name: 'api_result_msg') required String apiResultMsg,
@@ -21,7 +21,7 @@ class PortEntity with _$PortEntity {
 }
 
 @unfreezed
-class PortApiDataEntity with _$PortApiDataEntity {
+sealed class PortApiDataEntity with _$PortApiDataEntity {
   factory PortApiDataEntity({
     @JsonKey(name: 'api_event_object')
     PortApiDataApiEventObjectEntity? apiEventObject,
@@ -47,7 +47,7 @@ class PortApiDataEntity with _$PortApiDataEntity {
 }
 
 @unfreezed
-class PortApiDataApiEventObjectEntity with _$PortApiDataApiEventObjectEntity {
+sealed class PortApiDataApiEventObjectEntity with _$PortApiDataApiEventObjectEntity {
   factory PortApiDataApiEventObjectEntity({
     @JsonKey(name: 'api_c_num') int? apiCNum,
     @JsonKey(name: 'api_m_flag') int? apiMFlag,
@@ -59,7 +59,7 @@ class PortApiDataApiEventObjectEntity with _$PortApiDataApiEventObjectEntity {
 }
 
 @unfreezed
-class PortApiDataApiMaterialEntity with _$PortApiDataApiMaterialEntity {
+sealed class PortApiDataApiMaterialEntity with _$PortApiDataApiMaterialEntity {
   factory PortApiDataApiMaterialEntity({
     @JsonKey(name: 'api_member_id') required int apiMemberId,
     @JsonKey(name: 'api_id') required int apiId,
@@ -71,7 +71,7 @@ class PortApiDataApiMaterialEntity with _$PortApiDataApiMaterialEntity {
 }
 
 @unfreezed
-class PortApiDataApiDeckPortEntity
+sealed class PortApiDataApiDeckPortEntity
     with _$PortApiDataApiDeckPortEntity
     implements DeckData {
   factory PortApiDataApiDeckPortEntity({
@@ -89,7 +89,7 @@ class PortApiDataApiDeckPortEntity
 }
 
 @unfreezed
-class PortApiDataApiNdockEntity with _$PortApiDataApiNdockEntity {
+sealed class PortApiDataApiNdockEntity with _$PortApiDataApiNdockEntity {
   factory PortApiDataApiNdockEntity({
     @JsonKey(name: 'api_member_id') required int apiMemberId,
     @JsonKey(name: 'api_id') required int apiId,
@@ -108,7 +108,7 @@ class PortApiDataApiNdockEntity with _$PortApiDataApiNdockEntity {
 }
 
 @unfreezed
-class PortApiDataApiBasicEntity with _$PortApiDataApiBasicEntity {
+sealed class PortApiDataApiBasicEntity with _$PortApiDataApiBasicEntity {
   factory PortApiDataApiBasicEntity({
     @JsonKey(name: 'api_member_id') required String apiMemberId,
     @JsonKey(name: 'api_nickname') required String apiNickname,
@@ -151,7 +151,7 @@ class PortApiDataApiBasicEntity with _$PortApiDataApiBasicEntity {
 }
 
 @unfreezed
-class PortApiDataApiLogEntity with _$PortApiDataApiLogEntity {
+sealed class PortApiDataApiLogEntity with _$PortApiDataApiLogEntity {
   factory PortApiDataApiLogEntity({
     @JsonKey(name: 'api_no') required int apiNo,
     @JsonKey(name: 'api_type') required String apiType,

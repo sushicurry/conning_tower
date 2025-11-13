@@ -4,7 +4,7 @@ part 'task.freezed.dart';
 part 'task.g.dart';
 
 @freezed
-class Task with _$Task {
+sealed class Task with _$Task {
   @Assert('id.length <= 3', 'id must have a maximum length of 3')
   @Assert('title.length <= 20', 'title must have a maximum length of 20')
   @Assert("RegExp(r'^\\d{2}:[0-5]\\d:[0-5]\\d\$').hasMatch(time)", 'Invalid time format, maximum value is 99:59:59')
@@ -23,7 +23,7 @@ class Task with _$Task {
 }
 
 @freezed
-class Tasks with _$Tasks {
+sealed class Tasks with _$Tasks {
   const factory Tasks({
     required List<Task> items
 }) = _Tasks;

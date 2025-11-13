@@ -6,7 +6,7 @@ import 'package:timezone/timezone.dart';
 part 'operation_queue.freezed.dart';
 
 @unfreezed
-class OperationQueue with _$OperationQueue {
+sealed class OperationQueue with _$OperationQueue {
   const OperationQueue._();
 
   factory OperationQueue({required Map<int, Operation> map}) = _OperationQueue;
@@ -31,7 +31,7 @@ class OperationQueue with _$OperationQueue {
 }
 
 @freezed
-class Operation with _$Operation {
+sealed class Operation with _$Operation {
   factory Operation({required int id, required TZDateTime endTime}) =
       _Operation;
 }

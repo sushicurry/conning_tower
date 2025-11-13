@@ -5,7 +5,7 @@ part 'req_mission_start_entity.freezed.dart';
 part 'req_mission_start_entity.g.dart';
 
 @unfreezed
-class ReqMissionStartEntity with _$ReqMissionStartEntity {
+sealed class ReqMissionStartEntity with _$ReqMissionStartEntity {
   static const source = '/api_req_mission/start';
 
   factory ReqMissionStartEntity({
@@ -19,7 +19,7 @@ class ReqMissionStartEntity with _$ReqMissionStartEntity {
 }
 
 @unfreezed
-class ReqMissionStartApiDataEntity with _$ReqMissionStartApiDataEntity {
+sealed class ReqMissionStartApiDataEntity with _$ReqMissionStartApiDataEntity {
   factory ReqMissionStartApiDataEntity({
     @JsonKey(name: 'api_complatetime') required int apiComplatetime,
     @JsonKey(name: 'api_complatetime_str') required String apiComplatetimeStr,

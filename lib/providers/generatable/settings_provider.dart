@@ -8,7 +8,7 @@ part 'settings_provider.freezed.dart';
 part 'settings_provider.g.dart';
 
 @freezed
-class SettingsState with _$SettingsState {
+sealed class SettingsState with _$SettingsState {
   const factory SettingsState({
     required int dashboardIndex,
     required bool kcSparkEmoji,

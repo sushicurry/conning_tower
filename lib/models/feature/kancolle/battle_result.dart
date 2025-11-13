@@ -7,7 +7,7 @@ part 'battle_result.freezed.dart';
 part 'battle_result.g.dart';
 
 @unfreezed
-class BattleResult with _$BattleResult {
+sealed class BattleResult with _$BattleResult {
   factory BattleResult({
     String? actual,
     String? expected,

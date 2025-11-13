@@ -1,3 +1,4 @@
+
 name: conning_tower
 description: 艦橋 aka Conning tower or Bridge is a cross-platform KanColle browser
 
@@ -17,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 
 
-version: 1.16.4+1
+version: 1.16.5+1
 
 
 
@@ -57,23 +58,23 @@ dependencies:
   flutter_riverpod: ^2.3.6
   riverpod_annotation: ^2.3.5
   image_gallery_saver: ^2.0.3
-  freezed_annotation: ^2.4.1
-  json_annotation: ^4.8.1
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.9.0
   http: ^1.1.0
-  device_info_plus: ^10.1.2
-  flutter_local_notifications: ^17.2.3
-  timezone: ^0.9.2
-  flutter_timezone: ^3.0.1
+  device_info_plus: ^11.5.0
+  flutter_local_notifications: ^19.4.1
+  timezone: ^0.10.1
+  flutter_timezone: ^4.1.1
   in_app_review: ^2.0.8
   easy_debounce: ^2.0.3
   popover: ^0.3.0+1
   photo_manager: ^3.2.3
-  share_plus: ^10.0.2
+  share_plus: ^11.1.0
   flutter_staggered_grid_view: ^0.7.0
   percent_indicator: ^4.2.3
   carousel_slider: ^5.0.0
-  firebase_core: ^3.5.0
-  firebase_crashlytics: ^4.1.2
+  firebase_core: ^4.0.0
+  firebase_crashlytics: ^5.0.0
   pull_down_button:
     git:
       url: https://github.com/andychucs/pull_down_button.git
@@ -81,11 +82,11 @@ dependencies:
   objectbox: ^4.0.2
   objectbox_flutter_libs: ^4.0.2
   pointer_interceptor: ^0.10.1+1
-  introduction_screen: ^3.1.14
-  syncfusion_flutter_charts: ^27.1.50
+  introduction_screen: ^4.0.0
+  syncfusion_flutter_charts: ^30.2.7
   csv: ^6.0.0
-  file_picker: ^8.0.0+1
-  toastification: ^2.1.0
+  file_picker: ^10.3.2
+  toastification: ^3.0.3
   rank_icons: ^0.1.2
 
 dev_dependencies:
@@ -97,15 +98,15 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   custom_lint: ^0.7.0
   riverpod_lint: ^2.6.3
   build_runner: ^2.4.12
   riverpod_generator: ^2.6.3
-  freezed: ^2.5.7
+  freezed: ^3.1.0
   json_serializable: ^6.8.0
   objectbox_generator: ^4.0.2
-  analyzer: ^6.5.0
+  analyzer: ^7.6.0
 
 
 # For information on the generic Dart part of this file, see the
@@ -160,6 +161,3 @@ flutter_intl:
   arb_dir: lib/l10n # Optional. Sets the directory of your ARB resource files. Provided value should be a valid path on your system. Default: lib/l10n
   output_dir: lib/generated # Optional. Sets the directory of generated localization files. Provided value should be a valid path on your system. Default: lib/generated
   use_deferred_loading: false # Optional. Must be set to true to generate localization code that is loaded with deferred loading. Default: false
-
-
-

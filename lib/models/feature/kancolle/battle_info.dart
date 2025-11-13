@@ -18,7 +18,7 @@ part 'battle_info.freezed.dart';
 const kSecondSquadIndexStart = 6;
 
 @unfreezed
-class BattleInfo with _$BattleInfo {
+sealed class BattleInfo with _$BattleInfo {
   factory BattleInfo({
     int? mvp,
     List<Squad>? enemySquads,

@@ -26,7 +26,7 @@ enum QuestCategory {
 enum QuestType { daily, weekly, monthly, yearly, once, other }
 
 @unfreezed
-class QuestAssistant with _$QuestAssistant {
+sealed class QuestAssistant with _$QuestAssistant {
   const QuestAssistant._();
 
   factory QuestAssistant({
@@ -110,7 +110,7 @@ class QuestAssistant with _$QuestAssistant {
 }
 
 @freezed
-class Quest with _$Quest {
+sealed class Quest with _$Quest {
   const Quest._();
 
   factory Quest({
@@ -195,14 +195,14 @@ class Quest with _$Quest {
 abstract class QuestRule {}
 
 @unfreezed
-class SortieRule with _$SortieRule implements QuestRule {
+sealed class SortieRule with _$SortieRule implements QuestRule {
   factory SortieRule({
     String? fleetRule,
   }) = _SortieRule;
 }
 
 @unfreezed
-class QuestMission with _$QuestMission {
+sealed class QuestMission with _$QuestMission {
   const QuestMission._();
 
   factory QuestMission({

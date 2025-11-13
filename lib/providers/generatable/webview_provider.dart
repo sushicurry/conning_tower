@@ -72,7 +72,7 @@ document.cookie='ckcy=1;expires=$expires;domain=.dmm.com;path=/netgame_s/'
   return script;
 }
 @freezed
-class WebControllerState with _$WebControllerState {
+sealed class WebControllerState with _$WebControllerState {
   factory WebControllerState(
       {required InAppWebViewController? controller,
       required bool isInit,
@@ -463,6 +463,7 @@ class WebController extends _$WebController {
           _kancolleMessageHandle(message!);
         },
       );
+      debugPrint("!!!!!!!!!!! Created KcListener to listen for JS messages~~~~~~~~~~");
       // WebMessageListener kcCaptureListener = WebMessageListener(
       //   jsObjectName: "kcCapture",
       //   onPostMessage: (message, sourceOrigin, isMainFrame, replyProxy) {
@@ -470,6 +471,7 @@ class WebController extends _$WebController {
       //   },
       // );
       await controller.addWebMessageListener(kcListener);
+      debugPrint("~~~~~~~~~~Waiting for controller^^^^^^^^^^^");
       // await controller.addWebMessageListener(kcCaptureListener);
     }
   }
@@ -523,7 +525,7 @@ class WebController extends _$WebController {
 }
 
 @freezed
-class WebViewsState with _$WebViewsState {
+sealed class WebViewsState with _$WebViewsState {
   const factory WebViewsState({
     required Widget mainWebView,
     required List<WebViewTab> tabs,

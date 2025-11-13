@@ -5,7 +5,7 @@ part 'get_member_quest_list_entity.freezed.dart';
 part 'get_member_quest_list_entity.g.dart';
 
 @unfreezed
-class GetMemberQuestListEntity with _$GetMemberQuestListEntity {
+sealed class GetMemberQuestListEntity with _$GetMemberQuestListEntity {
   static const source = '/api_get_member/questlist';
 
   factory GetMemberQuestListEntity({
@@ -20,7 +20,7 @@ class GetMemberQuestListEntity with _$GetMemberQuestListEntity {
 }
 
 @unfreezed
-class GetMemberQuestListEntityApiDataEntity
+sealed class GetMemberQuestListEntityApiDataEntity
     with _$GetMemberQuestListEntityApiDataEntity {
   factory GetMemberQuestListEntityApiDataEntity({
     List<GetMemberQuestListEntityApiDataApiListEntity>? apiList,
@@ -54,7 +54,7 @@ class GetMemberQuestListEntityApiDataEntity
 */
 
 @unfreezed
-class GetMemberQuestListEntityApiDataApiListEntity
+sealed class GetMemberQuestListEntityApiDataApiListEntity
     with _$GetMemberQuestListEntityApiDataApiListEntity {
   factory GetMemberQuestListEntityApiDataApiListEntity({
     int? apiNo,

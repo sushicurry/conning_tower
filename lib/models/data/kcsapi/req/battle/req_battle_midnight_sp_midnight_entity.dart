@@ -6,7 +6,7 @@ part 'req_battle_midnight_sp_midnight_entity.freezed.dart';
 part 'req_battle_midnight_sp_midnight_entity.g.dart';
 
 @unfreezed
-class ReqBattleMidnightSpMidnightEntity
+sealed class ReqBattleMidnightSpMidnightEntity
     with _$ReqBattleMidnightSpMidnightEntity {
   static const source = "/api_req_battle_midnight/sp_midnight";
 
@@ -23,7 +23,7 @@ class ReqBattleMidnightSpMidnightEntity
 }
 
 @unfreezed
-class ReqBattleMidnightSpMidnightDataApiDataEntity
+sealed class ReqBattleMidnightSpMidnightDataApiDataEntity
     with _$ReqBattleMidnightSpMidnightDataApiDataEntity
     implements NightBattleData {
   factory ReqBattleMidnightSpMidnightDataApiDataEntity({

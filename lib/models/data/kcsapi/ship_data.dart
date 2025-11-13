@@ -42,7 +42,7 @@ abstract class ShipData {
 
 
 @unfreezed
-class ShipDataEntity
+sealed class ShipDataEntity
     with _$ShipDataEntity
     implements ShipData {
   factory ShipDataEntity({

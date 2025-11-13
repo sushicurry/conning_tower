@@ -7,7 +7,7 @@ part 'req_kousyou_getship_entity.freezed.dart';
 part 'req_kousyou_getship_entity.g.dart';
 
 @unfreezed
-class ReqKousyouGetshipEntity with _$ReqKousyouGetshipEntity {
+sealed class ReqKousyouGetshipEntity with _$ReqKousyouGetshipEntity {
   static const source = "/api_req_kousyou/getship";
   factory ReqKousyouGetshipEntity({
     @JsonKey(name: 'api_result') int? apiResult,
@@ -20,7 +20,7 @@ class ReqKousyouGetshipEntity with _$ReqKousyouGetshipEntity {
 }
 
 @unfreezed
-class ReqKousyouGetshipApiDataEntity with _$ReqKousyouGetshipApiDataEntity {
+sealed class ReqKousyouGetshipApiDataEntity with _$ReqKousyouGetshipApiDataEntity {
   factory ReqKousyouGetshipApiDataEntity({
     @JsonKey(name: 'api_id') int? apiId,
     @JsonKey(name: 'api_ship_id') int? apiShipId,
@@ -36,7 +36,7 @@ class ReqKousyouGetshipApiDataEntity with _$ReqKousyouGetshipApiDataEntity {
 }
 
 @unfreezed
-class ReqKousyouGetshipApiDataApiKdockEntity
+sealed class ReqKousyouGetshipApiDataApiKdockEntity
     with _$ReqKousyouGetshipApiDataApiKdockEntity {
   factory ReqKousyouGetshipApiDataApiKdockEntity({
     @JsonKey(name: 'api_id') int? apiId,
@@ -57,7 +57,7 @@ class ReqKousyouGetshipApiDataApiKdockEntity
 }
 
 @unfreezed
-class ReqKousyouGetshipApiDataApiSlotitemEntity
+sealed class ReqKousyouGetshipApiDataApiSlotitemEntity
     with _$ReqKousyouGetshipApiDataApiSlotitemEntity {
   factory ReqKousyouGetshipApiDataApiSlotitemEntity({
     @JsonKey(name: 'api_id') int? apiId,

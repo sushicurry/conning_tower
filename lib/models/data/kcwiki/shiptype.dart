@@ -4,7 +4,7 @@ part 'shiptype.freezed.dart';
 part 'shiptype.g.dart';
 
 @freezed
-class ShipType with _$ShipType {
+sealed class ShipType with _$ShipType {
   factory ShipType({
     required int id,
     required int sortNo,

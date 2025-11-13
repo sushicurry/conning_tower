@@ -5,7 +5,7 @@ part 'req_practice_battle_result_entity.freezed.dart';
 part 'req_practice_battle_result_entity.g.dart';
 
 @unfreezed
-class ReqPracticeBattleResultEntity with _$ReqPracticeBattleResultEntity {
+sealed class ReqPracticeBattleResultEntity with _$ReqPracticeBattleResultEntity {
   static const source = '/api_req_practice/battle_result';
 
   factory ReqPracticeBattleResultEntity({
@@ -19,7 +19,7 @@ class ReqPracticeBattleResultEntity with _$ReqPracticeBattleResultEntity {
 }
 
 @unfreezed
-class ReqPracticeBattleResultApiDataEntity
+sealed class ReqPracticeBattleResultApiDataEntity
     with _$ReqPracticeBattleResultApiDataEntity {
   factory ReqPracticeBattleResultApiDataEntity({
     @JsonKey(name: 'api_ship_id') List<int?>? apiShipId,
@@ -41,7 +41,7 @@ class ReqPracticeBattleResultApiDataEntity
 }
 
 @unfreezed
-class ReqPracticeBattleResultApiDataApiEnemyInfoEntity
+sealed class ReqPracticeBattleResultApiDataApiEnemyInfoEntity
     with _$ReqPracticeBattleResultApiDataApiEnemyInfoEntity {
   factory ReqPracticeBattleResultApiDataApiEnemyInfoEntity({
     @JsonKey(name: 'api_user_name') String? apiUserName,

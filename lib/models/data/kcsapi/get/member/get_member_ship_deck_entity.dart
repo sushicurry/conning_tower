@@ -7,7 +7,7 @@ part 'get_member_ship_deck_entity.freezed.dart';
 part 'get_member_ship_deck_entity.g.dart';
 
 @unfreezed
-class GetMemberShipDeckEntity with _$GetMemberShipDeckEntity {
+sealed class GetMemberShipDeckEntity with _$GetMemberShipDeckEntity {
   static const source = '/api_get_member/ship_deck';
 
   factory GetMemberShipDeckEntity({
@@ -21,7 +21,7 @@ class GetMemberShipDeckEntity with _$GetMemberShipDeckEntity {
 }
 
 @unfreezed
-class GetMemberShipDeckApiDataEntity with _$GetMemberShipDeckApiDataEntity {
+sealed class GetMemberShipDeckApiDataEntity with _$GetMemberShipDeckApiDataEntity {
   factory GetMemberShipDeckApiDataEntity({
     @JsonKey(name: 'api_ship_data')
     required List<GetMemberShipDeckApiDataApiShipDataEntity> apiShipData,
@@ -34,7 +34,7 @@ class GetMemberShipDeckApiDataEntity with _$GetMemberShipDeckApiDataEntity {
 }
 
 @unfreezed
-class GetMemberShipDeckApiDataApiShipDataEntity
+sealed class GetMemberShipDeckApiDataApiShipDataEntity
     with _$GetMemberShipDeckApiDataApiShipDataEntity
     implements ShipData {
   factory GetMemberShipDeckApiDataApiShipDataEntity({
@@ -80,7 +80,7 @@ class GetMemberShipDeckApiDataApiShipDataEntity
 }
 
 @unfreezed
-class GetMemberShipDeckApiDataApiDeckDataEntity
+sealed class GetMemberShipDeckApiDataApiDeckDataEntity
     with _$GetMemberShipDeckApiDataApiDeckDataEntity
     implements DeckData {
   factory GetMemberShipDeckApiDataApiDeckDataEntity({
