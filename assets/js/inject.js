@@ -98,5 +98,6 @@ function SendToFlutter(xhr, type) {
     }
 
     const jsonString = JSON.stringify(messageData);
+    console.log("???? Sending to flutter" + jsonString);
     kcMessage.postMessage(jsonString);
 }

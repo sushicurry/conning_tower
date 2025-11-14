@@ -59,7 +59,7 @@ class Settings extends _$Settings {
     bool kancolleAutoScrollDownOnLoad =
         localStorage.getBool("kancolleAutoScrollDownOnLoad") ?? false;
     bool useHttpForKancolle =
-        localStorage.getBool("useHttpForKancolle") ?? true;
+        localStorage.getBool("useHttpForKancolle") ?? false; //changed defualt
     bool webViewProgressBar = localStorage.getBool("webViewProgressBar") ?? true;
     return SettingsState(
       dashboardIndex: dashboardIndex,

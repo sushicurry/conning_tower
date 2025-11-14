@@ -9,7 +9,7 @@ const String kDocsUrl = 'https://conntower.github.io/docs';
 const String kChromeUA =
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36";
 const String kGameUrl =
-    'http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854';
+    'https://play.games.dmm.com/game/kancolle'; //changed game URL string
 const String kGameUrlApp = "http://www.dmm.com/netgame/social/application/-/detail/=/app_id=854854";
 const String kDMMOSAPIDomain = "osapi.dmm.com";
 const String kDMMDomain = "dmm.com";
